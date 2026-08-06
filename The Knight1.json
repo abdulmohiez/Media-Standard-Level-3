@@ -350,6 +350,346 @@
           "identifier": "https://asset-resources.gdevelop.io/public-resources/Bitmap texts/Not Jam bitmap fonts/02bfd26cf796fa150716a58ad1da54490e112c063d7870d6010005178c9d1ef3_NotJamOldStyle11.fnt",
           "name": "NotJamOldStyle11.fnt"
         }
+      },
+      {
+        "file": "Knight-Roll8.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Knight-Roll8.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Knight-Roll7.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Knight-Roll7.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Knight-Roll6.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Knight-Roll6.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Knight-Roll5.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Knight-Roll5.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Knight-Roll4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Knight-Roll4.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Knight-Roll3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Knight-Roll3.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Knight-Run9.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Knight-Run9.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Knight-Run8.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Knight-Run8.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Knight-Run7.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Knight-Run7.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Knight-Run6.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Knight-Run6.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Knight-Run5.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Knight-Run5.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Knight-Run4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Knight-Run4.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Knight-Run3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Knight-Run3.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Knight-Run2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Knight-Run2.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Knight-Run16.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Knight-Run16.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Knight-Run15.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Knight-Run15.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Knight-Run14.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Knight-Run14.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Knight-Run13.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Knight-Run13.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Knight-Run12.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Knight-Run12.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Knight-Run11.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Knight-Run11.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Knight-Run10.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Knight-Run10.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Knight-Run1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Knight-Run1.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Background1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Background1.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Background2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Background2.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Background3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Background3.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Background4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Background4.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Background5.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Background5.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Background6.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Background6.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Background7.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Background7.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Background8.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Background8.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Background9.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Background9.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Background10.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Background10.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Background11.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Background11.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Background12.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Background12.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Background13.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Background13.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Background14.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Background14.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Background15.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Background15.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Background16.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Background16.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Background17.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Background17.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Background18.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Background18.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "coin.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "coin.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "time_for_adventure.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "time_for_adventure.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
       }
     ]
   },
@@ -361,15 +701,15 @@
   "variables": [],
   "layouts": [
     {
-      "b": 255,
+      "b": 224,
       "disableInputWhenNotFocused": true,
       "mangledName": "Untitled_32scene",
       "name": "Untitled scene",
-      "r": 247,
+      "r": 224,
       "standardSortMethod": true,
       "stopSoundsOnStartup": true,
       "title": "",
-      "v": 249,
+      "v": 224,
       "uiSettings": {
         "grid": true,
         "gridType": "rectangular",
@@ -382,13 +722,20 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 0.5653158055126322,
+        "zoomFactor": 0.6244537826600003,
         "windowMask": false,
         "selectedLayer": "",
         "gameEditorMode": "instances-editor"
       },
       "objectsGroups": [],
-      "variables": [],
+      "variables": [
+        {
+          "name": "Score",
+          "persistentUuid": "65f6e12e-b72b-4439-a810-17e149897d19",
+          "type": "number",
+          "value": 0
+        }
+      ],
       "instances": [
         {
           "angle": 0,
@@ -401,7 +748,7 @@
           "width": 0,
           "x": 512,
           "y": 368,
-          "zOrder": 1,
+          "zOrder": 38,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -935,8 +1282,8 @@
           "layer": "",
           "name": "Boundary",
           "persistentUuid": "51d16cf8-3713-4cd6-97a7-3eda15d18628",
-          "width": 1264,
-          "x": 16,
+          "width": 1280,
+          "x": 0,
           "y": 720,
           "zOrder": 17,
           "numberProperties": [],
@@ -975,6 +1322,125 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 85,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Background",
+          "persistentUuid": "5f5b1eb0-f1a3-4436-98ec-32756417b5a1",
+          "width": 1280,
+          "x": 0,
+          "y": 0,
+          "zOrder": -10,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 42,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Background2",
+          "persistentUuid": "1b508a71-e87e-41d2-850e-f9bbb28df36d",
+          "width": 1280,
+          "x": 0,
+          "y": 85,
+          "zOrder": -10,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 168,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Background3",
+          "persistentUuid": "7f0fb0a1-0964-477f-9ca9-88dfccb85dff",
+          "width": 1280,
+          "x": 0,
+          "y": 126,
+          "zOrder": -10,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 51,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Background4",
+          "persistentUuid": "48633d43-e0e9-4501-ac28-7276262d1451",
+          "width": 1280,
+          "x": 0,
+          "y": 288,
+          "zOrder": -10,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 126,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Background5",
+          "persistentUuid": "244ab584-472f-4533-b457-ab6a187f8dcf",
+          "width": 1280,
+          "x": 0,
+          "y": 339,
+          "zOrder": -10,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 42,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Background6",
+          "persistentUuid": "d62d4286-58ae-4e88-b2af-64561d47324f",
+          "width": 1280,
+          "x": 0,
+          "y": 465,
+          "zOrder": -10,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 212,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Background7",
+          "persistentUuid": "3b3b4fe9-d512-42f3-a70b-3060f24d6754",
+          "width": 1280,
+          "x": 0,
+          "y": 508,
+          "zOrder": -10,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [
@@ -982,11 +1448,26 @@
           "adaptCollisionMaskAutomatically": true,
           "assetStoreId": "",
           "name": "Player",
+          "persistentUuid": "eaf45123-01da-4a89-9bd8-aa6963e5dfde",
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [],
           "effects": [],
           "behaviors": [
+            {
+              "name": "PlatformerCharacterAnimator",
+              "type": "PlatformerCharacterAnimator::PlatformerCharacterAnimator",
+              "EnableAnimationChanges": true,
+              "EnableHorizontalFlipping": true,
+              "IdleAnimationName": "Idle",
+              "RunAnimationName": "Run",
+              "JumpAnimationName": "Jump",
+              "FallAnimationName": "Fall",
+              "ClimbAnimationName": "Climb",
+              "PlatformerBehavior": "PlatformerObject",
+              "Animation": "Animation",
+              "Flippable": "Flippable"
+            },
             {
               "acceleration": 400,
               "canGoDownFromJumpthru": true,
@@ -1337,6 +1818,822 @@
                     {
                       "hasCustomCollisionMask": true,
                       "image": "Knight-Death4.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 9,
+                            "y": 9
+                          },
+                          {
+                            "x": 22,
+                            "y": 9
+                          },
+                          {
+                            "x": 22,
+                            "y": 28
+                          },
+                          {
+                            "x": 9,
+                            "y": 28
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Jump",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.15,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Knight-Roll3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 9,
+                            "y": 9
+                          },
+                          {
+                            "x": 22,
+                            "y": 9
+                          },
+                          {
+                            "x": 22,
+                            "y": 28
+                          },
+                          {
+                            "x": 9,
+                            "y": 28
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Knight-Roll4.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 9,
+                            "y": 9
+                          },
+                          {
+                            "x": 22,
+                            "y": 9
+                          },
+                          {
+                            "x": 22,
+                            "y": 28
+                          },
+                          {
+                            "x": 9,
+                            "y": 28
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Knight-Roll5.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 9,
+                            "y": 9
+                          },
+                          {
+                            "x": 22,
+                            "y": 9
+                          },
+                          {
+                            "x": 22,
+                            "y": 28
+                          },
+                          {
+                            "x": 9,
+                            "y": 28
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Knight-Roll6.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 9,
+                            "y": 9
+                          },
+                          {
+                            "x": 22,
+                            "y": 9
+                          },
+                          {
+                            "x": 22,
+                            "y": 28
+                          },
+                          {
+                            "x": 9,
+                            "y": 28
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Knight-Roll7.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 9,
+                            "y": 9
+                          },
+                          {
+                            "x": 22,
+                            "y": 9
+                          },
+                          {
+                            "x": 22,
+                            "y": 28
+                          },
+                          {
+                            "x": 9,
+                            "y": 28
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Knight-Roll8.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 9,
+                            "y": 9
+                          },
+                          {
+                            "x": 22,
+                            "y": 9
+                          },
+                          {
+                            "x": 22,
+                            "y": 28
+                          },
+                          {
+                            "x": 9,
+                            "y": 28
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Run",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.15,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Knight-Run1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 9,
+                            "y": 9
+                          },
+                          {
+                            "x": 22,
+                            "y": 9
+                          },
+                          {
+                            "x": 22,
+                            "y": 28
+                          },
+                          {
+                            "x": 9,
+                            "y": 28
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Knight-Run2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 9,
+                            "y": 9
+                          },
+                          {
+                            "x": 22,
+                            "y": 9
+                          },
+                          {
+                            "x": 22,
+                            "y": 28
+                          },
+                          {
+                            "x": 9,
+                            "y": 28
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Knight-Run3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 9,
+                            "y": 9
+                          },
+                          {
+                            "x": 22,
+                            "y": 9
+                          },
+                          {
+                            "x": 22,
+                            "y": 28
+                          },
+                          {
+                            "x": 9,
+                            "y": 28
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Knight-Run4.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 9,
+                            "y": 9
+                          },
+                          {
+                            "x": 22,
+                            "y": 9
+                          },
+                          {
+                            "x": 22,
+                            "y": 28
+                          },
+                          {
+                            "x": 9,
+                            "y": 28
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Knight-Run5.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 9,
+                            "y": 9
+                          },
+                          {
+                            "x": 22,
+                            "y": 9
+                          },
+                          {
+                            "x": 22,
+                            "y": 28
+                          },
+                          {
+                            "x": 9,
+                            "y": 28
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Knight-Run6.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 9,
+                            "y": 9
+                          },
+                          {
+                            "x": 22,
+                            "y": 9
+                          },
+                          {
+                            "x": 22,
+                            "y": 28
+                          },
+                          {
+                            "x": 9,
+                            "y": 28
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Knight-Run7.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 9,
+                            "y": 9
+                          },
+                          {
+                            "x": 22,
+                            "y": 9
+                          },
+                          {
+                            "x": 22,
+                            "y": 28
+                          },
+                          {
+                            "x": 9,
+                            "y": 28
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Knight-Run8.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 9,
+                            "y": 9
+                          },
+                          {
+                            "x": 22,
+                            "y": 9
+                          },
+                          {
+                            "x": 22,
+                            "y": 28
+                          },
+                          {
+                            "x": 9,
+                            "y": 28
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Knight-Run9.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 9,
+                            "y": 9
+                          },
+                          {
+                            "x": 22,
+                            "y": 9
+                          },
+                          {
+                            "x": 22,
+                            "y": 28
+                          },
+                          {
+                            "x": 9,
+                            "y": 28
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Knight-Run10.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 9,
+                            "y": 9
+                          },
+                          {
+                            "x": 22,
+                            "y": 9
+                          },
+                          {
+                            "x": 22,
+                            "y": 28
+                          },
+                          {
+                            "x": 9,
+                            "y": 28
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Knight-Run11.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 9,
+                            "y": 9
+                          },
+                          {
+                            "x": 22,
+                            "y": 9
+                          },
+                          {
+                            "x": 22,
+                            "y": 28
+                          },
+                          {
+                            "x": 9,
+                            "y": 28
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Knight-Run12.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 9,
+                            "y": 9
+                          },
+                          {
+                            "x": 22,
+                            "y": 9
+                          },
+                          {
+                            "x": 22,
+                            "y": 28
+                          },
+                          {
+                            "x": 9,
+                            "y": 28
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Knight-Run13.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 9,
+                            "y": 9
+                          },
+                          {
+                            "x": 22,
+                            "y": 9
+                          },
+                          {
+                            "x": 22,
+                            "y": 28
+                          },
+                          {
+                            "x": 9,
+                            "y": 28
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Knight-Run14.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 9,
+                            "y": 9
+                          },
+                          {
+                            "x": 22,
+                            "y": 9
+                          },
+                          {
+                            "x": 22,
+                            "y": 28
+                          },
+                          {
+                            "x": 9,
+                            "y": 28
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Knight-Run15.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 9,
+                            "y": 9
+                          },
+                          {
+                            "x": 22,
+                            "y": 9
+                          },
+                          {
+                            "x": 22,
+                            "y": 28
+                          },
+                          {
+                            "x": 9,
+                            "y": 28
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Knight-Run16.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -1792,6 +3089,7 @@
           "adaptCollisionMaskAutomatically": true,
           "assetStoreId": "",
           "name": "Boundary",
+          "persistentUuid": "7d478901-23b5-471b-a467-eb73b4f3b814",
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [],
@@ -1888,6 +3186,90 @@
             "align": "left",
             "verticalTextAlignment": "top"
           }
+        },
+        {
+          "assetStoreId": "",
+          "height": 16,
+          "name": "Background",
+          "persistentUuid": "e0f57def-3263-4648-bdd0-a1c458f2ff94",
+          "texture": "Background10.png",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 16,
+          "variables": [],
+          "effects": [],
+          "behaviors": []
+        },
+        {
+          "assetStoreId": "",
+          "height": 16,
+          "name": "Background2",
+          "persistentUuid": "e300a726-1160-46c8-b3e7-6c156323e29c",
+          "texture": "Background2.png",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 16,
+          "variables": [],
+          "effects": [],
+          "behaviors": []
+        },
+        {
+          "assetStoreId": "",
+          "height": 16,
+          "name": "Background3",
+          "persistentUuid": "07253efc-44e9-4aa9-9d5a-8517a2d9ddb5",
+          "texture": "Background14.png",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 16,
+          "variables": [],
+          "effects": [],
+          "behaviors": []
+        },
+        {
+          "assetStoreId": "",
+          "height": 16,
+          "name": "Background4",
+          "persistentUuid": "e0ce1a25-decc-48c6-8913-395bb0065c0d",
+          "texture": "Background15.png",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 16,
+          "variables": [],
+          "effects": [],
+          "behaviors": []
+        },
+        {
+          "assetStoreId": "",
+          "height": 16,
+          "name": "Background5",
+          "persistentUuid": "3cbea93e-2d47-4c92-af70-af9d501fa53d",
+          "texture": "Background16.png",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 16,
+          "variables": [],
+          "effects": [],
+          "behaviors": []
+        },
+        {
+          "assetStoreId": "",
+          "height": 16,
+          "name": "Background6",
+          "persistentUuid": "392fe271-a375-4e01-b1e8-212e5a321ed5",
+          "texture": "Background17.png",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 16,
+          "variables": [],
+          "effects": [],
+          "behaviors": []
+        },
+        {
+          "assetStoreId": "",
+          "height": 16,
+          "name": "Background7",
+          "persistentUuid": "1200f910-4fd0-4d89-9f4c-94476d82e15a",
+          "texture": "Background18.png",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 16,
+          "variables": [],
+          "effects": [],
+          "behaviors": []
         }
       ],
       "objectsFolderStructure": {
@@ -1928,6 +3310,27 @@
           },
           {
             "objectName": "UI_Score"
+          },
+          {
+            "objectName": "Background"
+          },
+          {
+            "objectName": "Background2"
+          },
+          {
+            "objectName": "Background3"
+          },
+          {
+            "objectName": "Background4"
+          },
+          {
+            "objectName": "Background5"
+          },
+          {
+            "objectName": "Background6"
+          },
+          {
+            "objectName": "Background7"
           }
         ]
       },
@@ -1966,6 +3369,19 @@
                 "",
                 "",
                 ""
+              ]
+            },
+            {
+              "type": {
+                "value": "PlayMusicOnChannel"
+              },
+              "parameters": [
+                "",
+                "time_for_adventure.mp3",
+                "0",
+                "yes",
+                "40",
+                "1"
               ]
             }
           ]
@@ -2014,6 +3430,39 @@
               "parameters": [
                 "Gold_Coin",
                 ""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "Score",
+                "+",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "UI_Score",
+                "Text",
+                "=",
+                "\"Score: \" + Score"
+              ]
+            },
+            {
+              "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "coin.wav",
+                "",
+                "50",
+                "1"
               ]
             }
           ]
@@ -2226,6 +3675,11 @@
               ]
             }
           ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": []
         }
       ],
       "layers": [
@@ -2369,6 +3823,10 @@
         {
           "name": "Platform",
           "type": "PlatformBehavior::PlatformBehavior"
+        },
+        {
+          "name": "PlatformerCharacterAnimator",
+          "type": "PlatformerCharacterAnimator::PlatformerCharacterAnimator"
         },
         {
           "name": "PlatformerObject",
@@ -12139,6 +13597,1437 @@
               },
               {
                 "propertyName": "ToogleClockwise"
+              }
+            ]
+          }
+        }
+      ],
+      "eventsBasedObjects": []
+    },
+    {
+      "author": "",
+      "category": "Movement",
+      "dimension": "2D",
+      "extensionNamespace": "",
+      "fullName": "Platformer character animator",
+      "gdevelopVersion": ">=5.5.222",
+      "helpPath": "",
+      "iconUrl": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAyMy4wLjMsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iSWNvbnMiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgMzIgMzIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDMyIDMyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPg0KCS5zdDB7ZmlsbDpub25lO3N0cm9rZTojMDAwMDAwO3N0cm9rZS13aWR0aDoyO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2UtbWl0ZXJsaW1pdDoxMDt9DQo8L3N0eWxlPg0KPGc+DQoJPHBhdGggZD0iTTIzLDExYzIuMiwwLDQtMS44LDQtNHMtMS44LTQtNC00cy00LDEuOC00LDRTMjAuOCwxMSwyMywxMXoiLz4NCgk8cGF0aCBkPSJNMzAuOCwxMi40Yy0wLjMtMC40LTEtMC41LTEuNC0wLjJsLTIuOSwyLjNjLTAuOCwwLjctMiwwLjYtMi43LTAuMmwtNy45LTcuOWMtMS42LTEuNi00LjEtMS42LTUuNywwTDcuMyw5LjMNCgkJYy0wLjQsMC40LTAuNCwxLDAsMS40czEsMC40LDEuNCwwbDIuOC0yLjhjMC44LTAuOCwyLjEtMC44LDIuOSwwbDEuNiwxLjZMMTEuNiwxNGMtMSwxLTEuNCwyLjMtMS4xLDMuN2MwLjIsMS4xLDAuOSwyLDEuOCwyLjYNCgkJbC0xLjYsMS42Yy0wLjQsMC40LTEsMC40LTEuNCwwbC0zLjYtMy42Yy0wLjQtMC40LTEtMC40LTEuNCwwcy0wLjQsMSwwLDEuNGwzLjYsMy42YzAuNiwwLjYsMS4zLDAuOSwyLjEsMC45czEuNi0wLjMsMi4xLTAuOQ0KCQlsMi4xLTIuMWwyLjUsMWMwLjcsMC4zLDEuMiwxLDEuMiwxLjh2NmMwLDAuNiwwLjQsMSwxLDFzMS0wLjQsMS0xdi02YzAtMS42LTEtMy4xLTIuNS0zLjdsLTEuNy0wLjdsNS4yLTUuMmwxLjQsMS40DQoJCWMwLjgsMC44LDEuOCwxLjIsMi45LDEuMmMwLjksMCwxLjgtMC4zLDIuNS0wLjlsMi45LTIuM0MzMS4xLDEzLjQsMzEuMSwxMi44LDMwLjgsMTIuNHoiLz4NCjwvZz4NCjwvc3ZnPg0K",
+      "name": "PlatformerCharacterAnimator",
+      "previewIconUrl": "https://resources.gdevelop-app.com/assets/Icons/Glyphster Pack/Master/SVG/Sports and Fitness/Sports and Fitness_training_running_run.svg",
+      "shortDescription": "Change animations and horizontal flipping of a platformer character automatically.",
+      "version": "1.2.0",
+      "description": [
+        "Automatically change the animations and horizontal flipping of an object having the 2D platformer character behavior based on movement and interaction with platform objects.",
+        "",
+        "The platformer example uses this extension ([open the project online](https://editor.gdevelop.io/?project=example://platformer))."
+      ],
+      "origin": {
+        "identifier": "PlatformerCharacterAnimator",
+        "name": "gdevelop-extension-store"
+      },
+      "tags": [
+        "animation",
+        "platformer",
+        "platform",
+        "flip"
+      ],
+      "authorIds": [
+        "gqDaZjCfevOOxBYkK6zlhtZnXCg1"
+      ],
+      "dependencies": [],
+      "globalVariables": [],
+      "sceneVariables": [],
+      "eventsFunctions": [],
+      "eventsFunctionsFolderStructure": {
+        "folderName": "__ROOT"
+      },
+      "eventsBasedBehaviors": [
+        {
+          "description": "Change animations and horizontal flipping of a platformer character automatically.",
+          "fullName": "Platformer character animator",
+          "helpPath": "",
+          "iconUrl": "",
+          "name": "PlatformerCharacterAnimator",
+          "objectType": "",
+          "previewIconUrl": "",
+          "eventsFunctions": [
+            {
+              "fullName": "",
+              "functionType": "Action",
+              "name": "doStepPreEvents",
+              "sentence": "",
+              "events": [
+                {
+                  "colorB": 228,
+                  "colorG": 176,
+                  "colorR": 74,
+                  "creationTime": 0,
+                  "name": "Flip character based on input from controls",
+                  "source": "",
+                  "type": "BuiltinCommonInstructions::Group",
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BooleanVariable"
+                          },
+                          "parameters": [
+                            "EnableHorizontalFlipping",
+                            "True",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "PlatformBehavior::PlatformerObjectBehavior::IsUsingControl"
+                              },
+                              "parameters": [
+                                "Object",
+                                "PlatformerBehavior",
+                                "\"Left\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "inverted": true,
+                                "value": "PlatformBehavior::PlatformerObjectBehavior::IsUsingControl"
+                              },
+                              "parameters": [
+                                "Object",
+                                "PlatformerBehavior",
+                                "\"Right\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::Once"
+                              },
+                              "parameters": []
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "FlippableCapability::FlippableBehavior::FlipX"
+                              },
+                              "parameters": [
+                                "Object",
+                                "Flippable",
+                                "yes"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "PlatformBehavior::PlatformerObjectBehavior::IsUsingControl"
+                              },
+                              "parameters": [
+                                "Object",
+                                "PlatformerBehavior",
+                                "\"Right\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "inverted": true,
+                                "value": "PlatformBehavior::PlatformerObjectBehavior::IsUsingControl"
+                              },
+                              "parameters": [
+                                "Object",
+                                "PlatformerBehavior",
+                                "\"Left\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::Once"
+                              },
+                              "parameters": []
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "FlippableCapability::FlippableBehavior::FlipX"
+                              },
+                              "parameters": [
+                                "Object",
+                                "Flippable",
+                                "no"
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "parameters": []
+                },
+                {
+                  "colorB": 228,
+                  "colorG": 176,
+                  "colorR": 74,
+                  "creationTime": 0,
+                  "name": "Change animations",
+                  "source": "",
+                  "type": "BuiltinCommonInstructions::Group",
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BooleanVariable"
+                          },
+                          "parameters": [
+                            "EnableAnimationChanges",
+                            "True",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "PlatformBehavior::IsJumping"
+                              },
+                              "parameters": [
+                                "Object",
+                                "PlatformerBehavior"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::Once"
+                              },
+                              "parameters": []
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                              },
+                              "parameters": [
+                                "Object",
+                                "Animation",
+                                "=",
+                                "JumpAnimationName"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "PlatformBehavior::IsFalling"
+                              },
+                              "parameters": [
+                                "Object",
+                                "PlatformerBehavior"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::Once"
+                              },
+                              "parameters": []
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                              },
+                              "parameters": [
+                                "Object",
+                                "Animation",
+                                "=",
+                                "FallAnimationName"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "PlatformBehavior::IsOnFloor"
+                              },
+                              "parameters": [
+                                "Object",
+                                "PlatformerBehavior"
+                              ]
+                            }
+                          ],
+                          "actions": [],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "PlatformBehavior::PlatformerObjectBehavior::IsMovingEvenALittle"
+                                  },
+                                  "parameters": [
+                                    "Object",
+                                    "PlatformerBehavior"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "BuiltinCommonInstructions::Once"
+                                  },
+                                  "parameters": []
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                                  },
+                                  "parameters": [
+                                    "Object",
+                                    "Animation",
+                                    "=",
+                                    "RunAnimationName"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "inverted": true,
+                                    "value": "PlatformBehavior::PlatformerObjectBehavior::IsMovingEvenALittle"
+                                  },
+                                  "parameters": [
+                                    "Object",
+                                    "PlatformerBehavior"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "BuiltinCommonInstructions::Once"
+                                  },
+                                  "parameters": []
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                                  },
+                                  "parameters": [
+                                    "Object",
+                                    "Animation",
+                                    "=",
+                                    "IdleAnimationName"
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "PlatformBehavior::IsOnLadder"
+                              },
+                              "parameters": [
+                                "Object",
+                                "PlatformerBehavior"
+                              ]
+                            }
+                          ],
+                          "actions": [],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "BuiltinCommonInstructions::Once"
+                                  },
+                                  "parameters": []
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                                  },
+                                  "parameters": [
+                                    "Object",
+                                    "Animation",
+                                    "=",
+                                    "ClimbAnimationName"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "PlatformBehavior::PlatformerObjectBehavior::IsMovingEvenALittle"
+                                  },
+                                  "parameters": [
+                                    "Object",
+                                    "PlatformerBehavior"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "BuiltinCommonInstructions::Once"
+                                  },
+                                  "parameters": []
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "AnimatableCapability::AnimatableBehavior::PlayAnimation"
+                                  },
+                                  "parameters": [
+                                    "Object",
+                                    "Animation"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "inverted": true,
+                                    "value": "PlatformBehavior::PlatformerObjectBehavior::IsMovingEvenALittle"
+                                  },
+                                  "parameters": [
+                                    "Object",
+                                    "PlatformerBehavior"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "BuiltinCommonInstructions::Once"
+                                  },
+                                  "parameters": []
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "AnimatableCapability::AnimatableBehavior::PauseAnimation"
+                                  },
+                                  "parameters": [
+                                    "Object",
+                                    "Animation"
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "inverted": true,
+                                "value": "PlatformBehavior::IsOnLadder"
+                              },
+                              "parameters": [
+                                "Object",
+                                "PlatformerBehavior"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::Once"
+                              },
+                              "parameters": []
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "AnimatableCapability::AnimatableBehavior::PlayAnimation"
+                              },
+                              "parameters": [
+                                "Object",
+                                "Animation"
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "parameters": []
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "PlatformerCharacterAnimator::PlatformerCharacterAnimator",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "fullName": "",
+              "functionType": "Action",
+              "name": "onActivate",
+              "sentence": "",
+              "events": [
+                {
+                  "colorB": 228,
+                  "colorG": 176,
+                  "colorR": 74,
+                  "creationTime": 0,
+                  "name": "Flip character based on input from controls",
+                  "source": "",
+                  "type": "BuiltinCommonInstructions::Group",
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BooleanVariable"
+                          },
+                          "parameters": [
+                            "EnableHorizontalFlipping",
+                            "True",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "PlatformBehavior::PlatformerObjectBehavior::IsUsingControl"
+                              },
+                              "parameters": [
+                                "Object",
+                                "PlatformerBehavior",
+                                "\"Left\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "inverted": true,
+                                "value": "PlatformBehavior::PlatformerObjectBehavior::IsUsingControl"
+                              },
+                              "parameters": [
+                                "Object",
+                                "PlatformerBehavior",
+                                "\"Right\""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "FlippableCapability::FlippableBehavior::FlipX"
+                              },
+                              "parameters": [
+                                "Object",
+                                "Flip",
+                                "yes"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "PlatformBehavior::PlatformerObjectBehavior::IsUsingControl"
+                              },
+                              "parameters": [
+                                "Object",
+                                "PlatformerBehavior",
+                                "\"Right\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "inverted": true,
+                                "value": "PlatformBehavior::PlatformerObjectBehavior::IsUsingControl"
+                              },
+                              "parameters": [
+                                "Object",
+                                "PlatformerBehavior",
+                                "\"Left\""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "FlippableCapability::FlippableBehavior::FlipX"
+                              },
+                              "parameters": [
+                                "Object",
+                                "Flip",
+                                "no"
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "parameters": []
+                },
+                {
+                  "colorB": 228,
+                  "colorG": 176,
+                  "colorR": 74,
+                  "creationTime": 0,
+                  "name": "Change animations",
+                  "source": "",
+                  "type": "BuiltinCommonInstructions::Group",
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BooleanVariable"
+                          },
+                          "parameters": [
+                            "EnableAnimationChanges",
+                            "True",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "PlatformBehavior::IsJumping"
+                              },
+                              "parameters": [
+                                "Object",
+                                "PlatformerBehavior"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                              },
+                              "parameters": [
+                                "Object",
+                                "Animation",
+                                "=",
+                                "JumpAnimationName"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "PlatformBehavior::IsFalling"
+                              },
+                              "parameters": [
+                                "Object",
+                                "PlatformerBehavior"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                              },
+                              "parameters": [
+                                "Object",
+                                "Animation",
+                                "=",
+                                "FallAnimationName"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "PlatformBehavior::IsOnFloor"
+                              },
+                              "parameters": [
+                                "Object",
+                                "PlatformerBehavior"
+                              ]
+                            }
+                          ],
+                          "actions": [],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "PlatformBehavior::PlatformerObjectBehavior::IsMovingEvenALittle"
+                                  },
+                                  "parameters": [
+                                    "Object",
+                                    "PlatformerBehavior"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                                  },
+                                  "parameters": [
+                                    "Object",
+                                    "Animation",
+                                    "=",
+                                    "RunAnimationName"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "inverted": true,
+                                    "value": "PlatformBehavior::PlatformerObjectBehavior::IsMovingEvenALittle"
+                                  },
+                                  "parameters": [
+                                    "Object",
+                                    "PlatformerBehavior"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                                  },
+                                  "parameters": [
+                                    "Object",
+                                    "Animation",
+                                    "=",
+                                    "IdleAnimationName"
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "PlatformBehavior::IsOnLadder"
+                              },
+                              "parameters": [
+                                "Object",
+                                "PlatformerBehavior"
+                              ]
+                            }
+                          ],
+                          "actions": [],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                                  },
+                                  "parameters": [
+                                    "Object",
+                                    "Animation",
+                                    "=",
+                                    "ClimbAnimationName"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "PlatformBehavior::PlatformerObjectBehavior::IsMovingEvenALittle"
+                                  },
+                                  "parameters": [
+                                    "Object",
+                                    "PlatformerBehavior"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "AnimatableCapability::AnimatableBehavior::PlayAnimation"
+                                  },
+                                  "parameters": [
+                                    "Object",
+                                    "Animation"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "inverted": true,
+                                    "value": "PlatformBehavior::PlatformerObjectBehavior::IsMovingEvenALittle"
+                                  },
+                                  "parameters": [
+                                    "Object",
+                                    "PlatformerBehavior"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "AnimatableCapability::AnimatableBehavior::PauseAnimation"
+                                  },
+                                  "parameters": [
+                                    "Object",
+                                    "Animation"
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "inverted": true,
+                                "value": "PlatformBehavior::IsOnLadder"
+                              },
+                              "parameters": [
+                                "Object",
+                                "PlatformerBehavior"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "AnimatableCapability::AnimatableBehavior::PlayAnimation"
+                              },
+                              "parameters": [
+                                "Object",
+                                "Animation"
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "parameters": []
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "PlatformerCharacterAnimator::PlatformerCharacterAnimator",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "Enable (or disable) automated animation changes a platformer character. Disabling animation changes is useful to play custom animations.",
+              "fullName": "Enable (or disable) automated animation changes",
+              "functionType": "Action",
+              "name": "EnableChangingAnimations",
+              "sentence": "Enable automated animation changes on _PARAM0_: _PARAM2_",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanVariable"
+                      },
+                      "parameters": [
+                        "EnableAnimationChanges",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanVariable"
+                      },
+                      "parameters": [
+                        "Value",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanVariable"
+                      },
+                      "parameters": [
+                        "EnableAnimationChanges",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "PlatformerCharacterAnimator::PlatformerCharacterAnimator",
+                  "type": "behavior"
+                },
+                {
+                  "defaultValue": "yes",
+                  "description": "Change animations automatically",
+                  "name": "Value",
+                  "optional": true,
+                  "type": "yesorno"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "Enable (or disable) automated horizontal flipping of a platform character.",
+              "fullName": "Enable (or disable) automated horizontal flipping",
+              "functionType": "Action",
+              "name": "EnableHorizontalFlipping",
+              "sentence": "Enable automated horizontal flipping on _PARAM0_: _PARAM2_",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanVariable"
+                      },
+                      "parameters": [
+                        "EnableHorizontalFlipping",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanVariable"
+                      },
+                      "parameters": [
+                        "Value",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanVariable"
+                      },
+                      "parameters": [
+                        "EnableHorizontalFlipping",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "PlatformerCharacterAnimator::PlatformerCharacterAnimator",
+                  "type": "behavior"
+                },
+                {
+                  "defaultValue": "yes",
+                  "description": "Enable horizontal flipping",
+                  "name": "Value",
+                  "optional": true,
+                  "type": "yesorno"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "Set the \"Idle\" animation name. Do not use quotation marks.",
+              "fullName": "\"Idle\" animation name",
+              "functionType": "Action",
+              "group": "Configure animations",
+              "name": "SetIdleAnimationName",
+              "sentence": "Set \"Idle\" animation of _PARAM0_ to _PARAM2_",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringVariable"
+                      },
+                      "parameters": [
+                        "IdleAnimationName",
+                        "=",
+                        "Value"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "PlatformerCharacterAnimator::PlatformerCharacterAnimator",
+                  "type": "behavior"
+                },
+                {
+                  "description": "Animation name",
+                  "name": "Value",
+                  "type": "string"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "Set the \"Move\" animation name. Do not use quotation marks.",
+              "fullName": "\"Move\" animation name",
+              "functionType": "Action",
+              "group": "Configure animations",
+              "name": "SetMoveAnimationName",
+              "sentence": "Set \"Move\" animation of _PARAM0_ to _PARAM2_",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringVariable"
+                      },
+                      "parameters": [
+                        "RunAnimationName",
+                        "=",
+                        "Value"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "PlatformerCharacterAnimator::PlatformerCharacterAnimator",
+                  "type": "behavior"
+                },
+                {
+                  "description": "Animation name",
+                  "name": "Value",
+                  "type": "string"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "Set the \"Jump\" animation name. Do not use quotation marks.",
+              "fullName": "\"Jump\" animation name",
+              "functionType": "Action",
+              "group": "Configure animations",
+              "name": "SetJumpAnimationName",
+              "sentence": "Set \"Jump\" animation of _PARAM0_ to _PARAM2_",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringVariable"
+                      },
+                      "parameters": [
+                        "JumpAnimationName",
+                        "=",
+                        "Value"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "PlatformerCharacterAnimator::PlatformerCharacterAnimator",
+                  "type": "behavior"
+                },
+                {
+                  "description": "Animation name",
+                  "name": "Value",
+                  "type": "string"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "Set the \"Fall\" animation name. Do not use quotation marks.",
+              "fullName": "\"Fall\" animation name",
+              "functionType": "Action",
+              "group": "Configure animations",
+              "name": "SetFallAnimationName",
+              "sentence": "Set \"Fall\" animation of _PARAM0_ to _PARAM2_",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringVariable"
+                      },
+                      "parameters": [
+                        "FallAnimationName",
+                        "=",
+                        "Value"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "PlatformerCharacterAnimator::PlatformerCharacterAnimator",
+                  "type": "behavior"
+                },
+                {
+                  "description": "Animation name",
+                  "name": "Value",
+                  "type": "string"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "Set the \"Climb\" animation name. Do not use quotation marks.",
+              "fullName": "\"Climb\" animation name",
+              "functionType": "Action",
+              "group": "Configure animations",
+              "name": "SetClimbAnimationName",
+              "sentence": "Set \"Climb\" animation of _PARAM0_ to _PARAM2_",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringVariable"
+                      },
+                      "parameters": [
+                        "ClimbAnimationName",
+                        "=",
+                        "Value"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "PlatformerCharacterAnimator::PlatformerCharacterAnimator",
+                  "type": "behavior"
+                },
+                {
+                  "description": "Animation name",
+                  "name": "Value",
+                  "type": "string"
+                }
+              ],
+              "objectGroups": []
+            }
+          ],
+          "eventsFunctionsFolderStructure": {
+            "folderName": "__ROOT",
+            "children": [
+              {
+                "functionName": "doStepPreEvents"
+              },
+              {
+                "functionName": "onActivate"
+              },
+              {
+                "functionName": "EnableChangingAnimations"
+              },
+              {
+                "functionName": "EnableHorizontalFlipping"
+              },
+              {
+                "folderName": "Configure animations",
+                "children": [
+                  {
+                    "functionName": "SetIdleAnimationName"
+                  },
+                  {
+                    "functionName": "SetMoveAnimationName"
+                  },
+                  {
+                    "functionName": "SetJumpAnimationName"
+                  },
+                  {
+                    "functionName": "SetFallAnimationName"
+                  },
+                  {
+                    "functionName": "SetClimbAnimationName"
+                  }
+                ]
+              }
+            ]
+          },
+          "propertyDescriptors": [
+            {
+              "value": "true",
+              "type": "Boolean",
+              "label": "Enable animation changes",
+              "name": "EnableAnimationChanges"
+            },
+            {
+              "value": "true",
+              "type": "Boolean",
+              "label": "Enable horizontal flipping",
+              "name": "EnableHorizontalFlipping"
+            },
+            {
+              "value": "Idle",
+              "type": "String",
+              "label": "\"Idle\" animation name ",
+              "group": "Animation names",
+              "name": "IdleAnimationName"
+            },
+            {
+              "value": "Run",
+              "type": "String",
+              "label": "\"Run\" animation name",
+              "group": "Animation names",
+              "name": "RunAnimationName"
+            },
+            {
+              "value": "Jump",
+              "type": "String",
+              "label": "\"Jump\" animation name",
+              "group": "Animation names",
+              "name": "JumpAnimationName"
+            },
+            {
+              "value": "Fall",
+              "type": "String",
+              "label": "\"Fall\" animation name",
+              "group": "Animation names",
+              "name": "FallAnimationName"
+            },
+            {
+              "value": "Climb",
+              "type": "String",
+              "label": "\"Climb\" animation name",
+              "group": "Animation names",
+              "name": "ClimbAnimationName"
+            },
+            {
+              "value": "",
+              "type": "Behavior",
+              "label": "Platformer character",
+              "extraInformation": [
+                "PlatformBehavior::PlatformerObjectBehavior"
+              ],
+              "choices": [],
+              "name": "PlatformerBehavior"
+            },
+            {
+              "value": "",
+              "type": "Behavior",
+              "label": "Animatable capacity",
+              "extraInformation": [
+                "AnimatableCapability::AnimatableBehavior"
+              ],
+              "choices": [],
+              "name": "Animation"
+            },
+            {
+              "value": "",
+              "type": "Behavior",
+              "label": "Flippable capacity",
+              "extraInformation": [
+                "FlippableCapability::FlippableBehavior"
+              ],
+              "choices": [],
+              "name": "Flippable"
+            }
+          ],
+          "propertiesFolderStructure": {
+            "folderName": "__ROOT",
+            "children": [
+              {
+                "propertyName": "EnableAnimationChanges"
+              },
+              {
+                "propertyName": "EnableHorizontalFlipping"
+              },
+              {
+                "folderName": "Animation names",
+                "children": [
+                  {
+                    "propertyName": "IdleAnimationName"
+                  },
+                  {
+                    "propertyName": "RunAnimationName"
+                  },
+                  {
+                    "propertyName": "JumpAnimationName"
+                  },
+                  {
+                    "propertyName": "FallAnimationName"
+                  },
+                  {
+                    "propertyName": "ClimbAnimationName"
+                  }
+                ]
+              },
+              {
+                "propertyName": "PlatformerBehavior"
+              },
+              {
+                "propertyName": "Animation"
+              },
+              {
+                "propertyName": "Flippable"
               }
             ]
           }
