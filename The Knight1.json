@@ -690,6 +690,86 @@
         "preloadAsSound": false,
         "preloadInCache": false,
         "userAdded": false
+      },
+      {
+        "file": "Background19.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Background19.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Background20.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Background20.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Background21.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Background21.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Background22.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Background22.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Background23.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Background23.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Background24.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Background24.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Background25.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Background25.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Background26.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Background26.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Background27.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Background27.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Platform_Dirt3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Platform_Dirt3.png",
+        "smoothed": false,
+        "userAdded": false
       }
     ]
   },
@@ -698,13 +778,1377 @@
     "folderName": "__ROOT"
   },
   "objectsGroups": [],
-  "variables": [],
+  "variables": [
+    {
+      "name": "Audio_Enabled",
+      "type": "number",
+      "value": 1
+    },
+    {
+      "name": "Dim_Enabled",
+      "type": "number",
+      "value": 0
+    }
+  ],
   "layouts": [
+    {
+      "b": 216,
+      "disableInputWhenNotFocused": true,
+      "mangledName": "Game_32Menu",
+      "name": "Game Menu",
+      "r": 216,
+      "standardSortMethod": true,
+      "stopSoundsOnStartup": true,
+      "title": "",
+      "v": 216,
+      "uiSettings": {
+        "grid": true,
+        "gridType": "rectangular",
+        "gridWidth": 16,
+        "gridHeight": 16,
+        "gridDepth": 16,
+        "gridOffsetX": 0,
+        "gridOffsetY": 0,
+        "gridOffsetZ": 0,
+        "gridColor": 10401023,
+        "gridAlpha": 0.8,
+        "snap": true,
+        "zoomFactor": 0.546875,
+        "windowMask": false,
+        "selectedLayer": "",
+        "gameEditorMode": "instances-editor"
+      },
+      "objectsGroups": [],
+      "variables": [],
+      "instances": [
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 80,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Background1",
+          "persistentUuid": "495d2ae3-3a1d-473c-aa80-ce051f922db6",
+          "width": 1280,
+          "x": 0,
+          "y": 0,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 48,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Background2",
+          "persistentUuid": "d14d5fb6-c919-44aa-b052-ed7c400f6c9f",
+          "width": 1280,
+          "x": 0,
+          "y": 80,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 192,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Background3",
+          "persistentUuid": "4ba11c13-05d9-40f6-8b71-5c6bc749723e",
+          "width": 1280,
+          "x": 0,
+          "y": 128,
+          "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 48,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Background4",
+          "persistentUuid": "72b5e926-d760-40c5-a4ec-48c5f8404618",
+          "width": 1280,
+          "x": 0,
+          "y": 320,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 128,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Background5",
+          "persistentUuid": "685e69cc-6109-42e3-b969-e01b30bead39",
+          "width": 1280,
+          "x": 0,
+          "y": 368,
+          "zOrder": 5,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 48,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Background6",
+          "persistentUuid": "b0443bc4-72bb-4573-b8de-5ea41510316b",
+          "width": 1280,
+          "x": 0,
+          "y": 496,
+          "zOrder": 6,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 176,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Background7",
+          "persistentUuid": "44c90a90-191c-443f-b091-6800f3edcf7c",
+          "width": 1280,
+          "x": 0,
+          "y": 544,
+          "zOrder": 7,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Menu_Title",
+          "persistentUuid": "42f25910-094b-4cea-abfa-8e15da6f9ff4",
+          "width": 0,
+          "x": 146,
+          "y": 128,
+          "zOrder": 8,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Button_Play",
+          "persistentUuid": "abe19267-dde9-4aef-8ea2-99234800fb5d",
+          "width": 0,
+          "x": 472,
+          "y": 324,
+          "zOrder": 9,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Settings",
+          "persistentUuid": "2136c3ad-968a-4908-a227-934020e4bedc",
+          "width": 0,
+          "x": 512,
+          "y": 416,
+          "zOrder": 10,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 48,
+          "keepRatio": true,
+          "layer": "",
+          "name": "NewTiledSprite",
+          "persistentUuid": "9e36b170-3f6e-4b34-a9f6-894382f46787",
+          "width": 208,
+          "x": 1072,
+          "y": 240,
+          "zOrder": 11,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 16,
+          "keepRatio": true,
+          "layer": "",
+          "name": "NewTiledSprite2",
+          "persistentUuid": "471d8d5d-5e32-438b-b392-3e424273bd8d",
+          "width": 208,
+          "x": 1072,
+          "y": 224,
+          "zOrder": 12,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 16,
+          "keepRatio": true,
+          "layer": "",
+          "name": "NewTiledSprite2",
+          "persistentUuid": "13372655-c948-4990-9c80-292c779c9776",
+          "width": 144,
+          "x": 864,
+          "y": 304,
+          "zOrder": 13,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 32,
+          "keepRatio": true,
+          "layer": "",
+          "name": "NewTiledSprite",
+          "persistentUuid": "98013930-cd83-4331-819b-073eef952db8",
+          "width": 144,
+          "x": 864,
+          "y": 320,
+          "zOrder": 14,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        }
+      ],
+      "objects": [
+        {
+          "assetStoreId": "",
+          "height": 16,
+          "name": "Background1",
+          "persistentUuid": "b5ca32ee-6d5b-4903-a997-404e9c0db949",
+          "texture": "Background19.png",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 16,
+          "variables": [],
+          "effects": [],
+          "behaviors": []
+        },
+        {
+          "assetStoreId": "",
+          "height": 16,
+          "name": "Background2",
+          "persistentUuid": "52f09f28-2053-4ea7-96c6-139949b85e45",
+          "texture": "Background20.png",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 16,
+          "variables": [],
+          "effects": [],
+          "behaviors": []
+        },
+        {
+          "assetStoreId": "",
+          "height": 16,
+          "name": "Background3",
+          "persistentUuid": "11ec34e9-b0ca-4351-8afe-f9c4cf1be935",
+          "texture": "Background21.png",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 16,
+          "variables": [],
+          "effects": [],
+          "behaviors": []
+        },
+        {
+          "assetStoreId": "",
+          "height": 16,
+          "name": "Background4",
+          "persistentUuid": "e39a1f17-06f4-4895-adbe-7100aa1d79c2",
+          "texture": "Background22.png",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 16,
+          "variables": [],
+          "effects": [],
+          "behaviors": []
+        },
+        {
+          "assetStoreId": "",
+          "height": 16,
+          "name": "Background5",
+          "persistentUuid": "b3a60f64-fb83-4085-a7ab-6ae36cd274cf",
+          "texture": "Background23.png",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 16,
+          "variables": [],
+          "effects": [],
+          "behaviors": []
+        },
+        {
+          "assetStoreId": "",
+          "height": 16,
+          "name": "Background6",
+          "persistentUuid": "4191052f-4d53-4d8f-8641-906d3f2543f4",
+          "texture": "Background24.png",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 16,
+          "variables": [],
+          "effects": [],
+          "behaviors": []
+        },
+        {
+          "assetStoreId": "",
+          "height": 16,
+          "name": "Background7",
+          "persistentUuid": "292dd98c-0b71-4188-af93-77ad569d4e90",
+          "texture": "Background25.png",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 16,
+          "variables": [],
+          "effects": [],
+          "behaviors": []
+        },
+        {
+          "assetStoreId": "",
+          "height": 16,
+          "name": "Background8",
+          "persistentUuid": "9e733352-5bc9-4cd4-a516-887cc122d974",
+          "texture": "Background19.png",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 16,
+          "variables": [],
+          "effects": [],
+          "behaviors": []
+        },
+        {
+          "assetStoreId": "54d86c7d46104e19c9a7e86e173b71bce9592b476e156846c53f11be91039afd",
+          "name": "Menu_Title",
+          "persistentUuid": "b6f4d838-a383-4798-b70b-c2df890d974e",
+          "type": "BitmapText::BitmapTextObject",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "text": "SKY FORTRESS ESCAPE",
+            "opacity": 255,
+            "scale": 6,
+            "fontSize": 20,
+            "tint": "0;0;0",
+            "bitmapFontResourceName": "assets/NotJamOldStyle11.fnt",
+            "textureAtlasResourceName": "assets/NotJamOldStyle11.png",
+            "align": "left",
+            "verticalTextAlignment": "top"
+          }
+        },
+        {
+          "assetStoreId": "54d86c7d46104e19c9a7e86e173b71bce9592b476e156846c53f11be91039afd",
+          "name": "Button_Play",
+          "persistentUuid": "038f5ab8-99a6-4b37-af7f-a0e9941b8169",
+          "type": "BitmapText::BitmapTextObject",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "text": "Play Game",
+            "opacity": 255,
+            "scale": 4,
+            "fontSize": 20,
+            "tint": "255;255;255",
+            "bitmapFontResourceName": "assets/NotJamOldStyle11.fnt",
+            "textureAtlasResourceName": "assets/NotJamOldStyle11.png",
+            "align": "left",
+            "verticalTextAlignment": "top"
+          }
+        },
+        {
+          "assetStoreId": "54d86c7d46104e19c9a7e86e173b71bce9592b476e156846c53f11be91039afd",
+          "name": "Settings",
+          "persistentUuid": "5e5f7372-03f7-400a-ad12-53175d80a052",
+          "type": "BitmapText::BitmapTextObject",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "text": "Settings",
+            "opacity": 255,
+            "scale": 4,
+            "fontSize": 20,
+            "tint": "255;255;255",
+            "bitmapFontResourceName": "assets/NotJamOldStyle11.fnt",
+            "textureAtlasResourceName": "assets/NotJamOldStyle11.png",
+            "align": "left",
+            "verticalTextAlignment": "top"
+          }
+        },
+        {
+          "assetStoreId": "",
+          "height": 16,
+          "name": "NewTiledSprite",
+          "texture": "Platform_Dirt2.png",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 16,
+          "variables": [],
+          "effects": [],
+          "behaviors": []
+        },
+        {
+          "assetStoreId": "",
+          "height": 16,
+          "name": "NewTiledSprite2",
+          "persistentUuid": "ee78227c-ab8c-424a-ad4a-387de595d61e",
+          "texture": "Platform_Dirt3.png",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 16,
+          "variables": [],
+          "effects": [],
+          "behaviors": []
+        }
+      ],
+      "objectsFolderStructure": {
+        "folderName": "__ROOT",
+        "children": [
+          {
+            "objectName": "Menu_Title"
+          },
+          {
+            "objectName": "Button_Play"
+          },
+          {
+            "objectName": "Settings"
+          },
+          {
+            "objectName": "Background1"
+          },
+          {
+            "objectName": "Background2"
+          },
+          {
+            "objectName": "Background3"
+          },
+          {
+            "objectName": "Background4"
+          },
+          {
+            "objectName": "Background5"
+          },
+          {
+            "objectName": "Background6"
+          },
+          {
+            "objectName": "Background7"
+          },
+          {
+            "objectName": "Background8"
+          },
+          {
+            "objectName": "NewTiledSprite"
+          },
+          {
+            "objectName": "NewTiledSprite2"
+          }
+        ]
+      },
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "IsCursorOnObject"
+              },
+              "parameters": [
+                "Button_Play",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "MouseButtonFromTextPressed"
+              },
+              "parameters": [
+                "",
+                "\"Left\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Scene"
+              },
+              "parameters": [
+                "",
+                "\"Level 1\"",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "IsCursorOnObject"
+              },
+              "parameters": [
+                "Settings",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "MouseButtonFromTextPressed"
+              },
+              "parameters": [
+                "",
+                "\"Left\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Scene"
+              },
+              "parameters": [
+                "",
+                "\"Settings\"",
+                ""
+              ]
+            }
+          ]
+        }
+      ],
+      "layers": [
+        {
+          "ambientLightColorB": 200,
+          "ambientLightColorG": 200,
+          "ambientLightColorR": 200,
+          "camera2DPlaneMaxDrawingDistance": 5000,
+          "camera3DFarPlaneDistance": 10000,
+          "camera3DFieldOfView": 45,
+          "camera3DNearPlaneDistance": 3,
+          "cameraType": "",
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "isLocked": false,
+          "name": "",
+          "renderingType": "",
+          "visibility": true,
+          "cameras": [
+            {
+              "defaultSize": true,
+              "defaultViewport": true,
+              "height": 0,
+              "viewportBottom": 1,
+              "viewportLeft": 0,
+              "viewportRight": 1,
+              "viewportTop": 0,
+              "width": 0
+            }
+          ],
+          "effects": [
+            {
+              "effectType": "Scene3D::HemisphereLight",
+              "name": "3D Ambient Hemisphere Light",
+              "doubleParameters": {
+                "elevation": 40,
+                "intensity": 0.33,
+                "rotation": 300
+              },
+              "stringParameters": {
+                "groundColor": "127;127;127",
+                "skyColor": "255;255;255",
+                "top": "Z+"
+              },
+              "booleanParameters": {}
+            },
+            {
+              "effectType": "Scene3D::DirectionalLight",
+              "name": "3D Sun Light",
+              "doubleParameters": {
+                "distanceFromCamera": 1500,
+                "elevation": 40,
+                "frustumSize": 4000,
+                "intensity": 0.75,
+                "minimumShadowBias": 0,
+                "rotation": 300
+              },
+              "stringParameters": {
+                "color": "255;255;255",
+                "shadowQuality": "medium",
+                "top": "Z+"
+              },
+              "booleanParameters": {
+                "isCastingShadow": true
+              }
+            }
+          ]
+        }
+      ],
+      "behaviorsSharedData": [
+        {
+          "name": "Effect",
+          "type": "EffectCapability::EffectBehavior"
+        },
+        {
+          "name": "Opacity",
+          "type": "OpacityCapability::OpacityBehavior"
+        },
+        {
+          "name": "Resizable",
+          "type": "ResizableCapability::ResizableBehavior"
+        },
+        {
+          "name": "Scale",
+          "type": "ScalableCapability::ScalableBehavior"
+        },
+        {
+          "name": "Text",
+          "type": "TextContainerCapability::TextContainerBehavior"
+        }
+      ]
+    },
+    {
+      "b": 255,
+      "disableInputWhenNotFocused": true,
+      "mangledName": "Settings",
+      "name": "Settings",
+      "r": 247,
+      "standardSortMethod": true,
+      "stopSoundsOnStartup": true,
+      "title": "",
+      "v": 249,
+      "uiSettings": {
+        "grid": true,
+        "gridType": "rectangular",
+        "gridWidth": 16,
+        "gridHeight": 16,
+        "gridDepth": 16,
+        "gridOffsetX": 0,
+        "gridOffsetY": 0,
+        "gridOffsetZ": 0,
+        "gridColor": 10401023,
+        "gridAlpha": 0.8,
+        "snap": true,
+        "zoomFactor": 0.546875,
+        "windowMask": false,
+        "selectedLayer": "",
+        "gameEditorMode": "instances-editor"
+      },
+      "objectsGroups": [],
+      "variables": [],
+      "instances": [
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 720,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Background",
+          "persistentUuid": "fd9938f0-3e9d-450c-9198-c59a6ee4735d",
+          "width": 768,
+          "x": 256,
+          "y": 0,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Audio_Text",
+          "persistentUuid": "d45bcce0-b4f8-4c68-937b-59ade956c581",
+          "width": 0,
+          "x": 368,
+          "y": 256,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Settings",
+          "persistentUuid": "7b5d503e-bbfc-4164-a910-df80a133bf8d",
+          "width": 0,
+          "x": 512,
+          "y": 80,
+          "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 88,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Yes",
+          "persistentUuid": "c478cc96-66c0-4acb-a864-12085ff3ac6d",
+          "width": 112,
+          "x": 768,
+          "y": 256,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "____text",
+          "persistentUuid": "46260d3e-4962-4054-87d3-28bdeff111ea",
+          "width": 0,
+          "x": 880,
+          "y": 256,
+          "zOrder": 5,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "No",
+          "persistentUuid": "1e99d67c-1c28-4cc7-920c-0ecf391d6e49",
+          "width": 0,
+          "x": 912,
+          "y": 256,
+          "zOrder": 6,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Screen_dim",
+          "persistentUuid": "66a38927-9ef9-424e-a3b0-f3ad096d6834",
+          "width": 0,
+          "x": 292,
+          "y": 368,
+          "zOrder": 7,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Yes",
+          "persistentUuid": "a6a45860-629c-4699-9a86-35d8e05bc67f",
+          "width": 0,
+          "x": 764,
+          "y": 368,
+          "zOrder": 8,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "____text",
+          "persistentUuid": "804a743e-e3f7-4c6b-b720-4a726fa67f6f",
+          "width": 0,
+          "x": 872,
+          "y": 368,
+          "zOrder": 9,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "No",
+          "persistentUuid": "bcb3c3fb-1f51-4cce-9cd0-38fc9ba368d2",
+          "width": 0,
+          "x": 912,
+          "y": 368,
+          "zOrder": 10,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 720,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Background2",
+          "persistentUuid": "dd216004-189b-444c-9363-204d0268195e",
+          "width": 256,
+          "x": 0,
+          "y": 0,
+          "zOrder": 11,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 720,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Background2",
+          "persistentUuid": "f88acc46-6095-4147-b82f-4cacc7d8d89c",
+          "width": 256,
+          "x": 1024,
+          "y": 0,
+          "zOrder": 12,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Button_back",
+          "persistentUuid": "35c47a67-d4d8-4efc-932b-fac058b8a0c1",
+          "width": 0,
+          "x": 432,
+          "y": 500,
+          "zOrder": 13,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        }
+      ],
+      "objects": [
+        {
+          "assetStoreId": "",
+          "height": 16,
+          "name": "Background",
+          "texture": "Background26.png",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 16,
+          "variables": [],
+          "effects": [],
+          "behaviors": []
+        },
+        {
+          "assetStoreId": "54d86c7d46104e19c9a7e86e173b71bce9592b476e156846c53f11be91039afd",
+          "name": "Audio_Text",
+          "persistentUuid": "fbb349e6-7839-44f7-8a0b-81b1cf8411b3",
+          "type": "BitmapText::BitmapTextObject",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "text": "Audio ",
+            "opacity": 255,
+            "scale": 4,
+            "fontSize": 20,
+            "tint": "255;255;255",
+            "bitmapFontResourceName": "assets/NotJamOldStyle11.fnt",
+            "textureAtlasResourceName": "assets/NotJamOldStyle11.png",
+            "align": "left",
+            "verticalTextAlignment": "top"
+          }
+        },
+        {
+          "assetStoreId": "54d86c7d46104e19c9a7e86e173b71bce9592b476e156846c53f11be91039afd",
+          "name": "Settings",
+          "persistentUuid": "ecac3b98-2a2a-40b2-8d1f-07231e744034",
+          "type": "BitmapText::BitmapTextObject",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "text": "Settings\n",
+            "opacity": 255,
+            "scale": 4,
+            "fontSize": 20,
+            "tint": "255;255;255",
+            "bitmapFontResourceName": "assets/NotJamOldStyle11.fnt",
+            "textureAtlasResourceName": "assets/NotJamOldStyle11.png",
+            "align": "left",
+            "verticalTextAlignment": "top"
+          }
+        },
+        {
+          "assetStoreId": "54d86c7d46104e19c9a7e86e173b71bce9592b476e156846c53f11be91039afd",
+          "name": "Yes",
+          "persistentUuid": "8eea5ce5-739e-45d0-92e5-cf526bceb75c",
+          "type": "BitmapText::BitmapTextObject",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "text": "Yes\n",
+            "opacity": 255,
+            "scale": 4,
+            "fontSize": 20,
+            "tint": "255;255;255",
+            "bitmapFontResourceName": "assets/NotJamOldStyle11.fnt",
+            "textureAtlasResourceName": "assets/NotJamOldStyle11.png",
+            "align": "left",
+            "verticalTextAlignment": "top"
+          }
+        },
+        {
+          "assetStoreId": "54d86c7d46104e19c9a7e86e173b71bce9592b476e156846c53f11be91039afd",
+          "name": "____text",
+          "persistentUuid": "28df23fb-83a0-4532-ab96-2ecce41be1b3",
+          "type": "BitmapText::BitmapTextObject",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "text": "/\n",
+            "opacity": 255,
+            "scale": 4,
+            "fontSize": 20,
+            "tint": "255;255;255",
+            "bitmapFontResourceName": "assets/NotJamOldStyle11.fnt",
+            "textureAtlasResourceName": "assets/NotJamOldStyle11.png",
+            "align": "left",
+            "verticalTextAlignment": "top"
+          }
+        },
+        {
+          "assetStoreId": "54d86c7d46104e19c9a7e86e173b71bce9592b476e156846c53f11be91039afd",
+          "name": "No",
+          "persistentUuid": "df52a46f-8f64-450d-8924-255108440f08",
+          "type": "BitmapText::BitmapTextObject",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "text": "No\n",
+            "opacity": 255,
+            "scale": 4,
+            "fontSize": 20,
+            "tint": "255;255;255",
+            "bitmapFontResourceName": "assets/NotJamOldStyle11.fnt",
+            "textureAtlasResourceName": "assets/NotJamOldStyle11.png",
+            "align": "left",
+            "verticalTextAlignment": "top"
+          }
+        },
+        {
+          "assetStoreId": "54d86c7d46104e19c9a7e86e173b71bce9592b476e156846c53f11be91039afd",
+          "name": "Screen_dim",
+          "persistentUuid": "8cdedebc-2d35-4c91-9f07-939f35a3e502",
+          "type": "BitmapText::BitmapTextObject",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "text": "Screen Dim\n",
+            "opacity": 255,
+            "scale": 4,
+            "fontSize": 20,
+            "tint": "255;255;255",
+            "bitmapFontResourceName": "assets/NotJamOldStyle11.fnt",
+            "textureAtlasResourceName": "assets/NotJamOldStyle11.png",
+            "align": "left",
+            "verticalTextAlignment": "top"
+          }
+        },
+        {
+          "assetStoreId": "",
+          "height": 16,
+          "name": "Background2",
+          "persistentUuid": "d1548708-0a60-403e-a4c2-23d5c22f9fe5",
+          "texture": "Background27.png",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 16,
+          "variables": [],
+          "effects": [],
+          "behaviors": []
+        },
+        {
+          "assetStoreId": "",
+          "height": 16,
+          "name": "Background3",
+          "persistentUuid": "b2fbf756-0efd-4367-a087-8f7386c6b4ea",
+          "texture": "Background26.png",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 16,
+          "variables": [],
+          "effects": [],
+          "behaviors": []
+        },
+        {
+          "assetStoreId": "54d86c7d46104e19c9a7e86e173b71bce9592b476e156846c53f11be91039afd",
+          "name": "Button_back",
+          "persistentUuid": "cd552892-a92c-4439-82ca-cb40bc838d2e",
+          "type": "BitmapText::BitmapTextObject",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "text": "Back to Menu",
+            "opacity": 255,
+            "scale": 4,
+            "fontSize": 20,
+            "tint": "255;255;255",
+            "bitmapFontResourceName": "assets/NotJamOldStyle11.fnt",
+            "textureAtlasResourceName": "assets/NotJamOldStyle11.png",
+            "align": "left",
+            "verticalTextAlignment": "top"
+          }
+        }
+      ],
+      "objectsFolderStructure": {
+        "folderName": "__ROOT",
+        "children": [
+          {
+            "objectName": "Background"
+          },
+          {
+            "objectName": "Background2"
+          },
+          {
+            "objectName": "Background3"
+          },
+          {
+            "objectName": "Audio_Text"
+          },
+          {
+            "objectName": "Settings"
+          },
+          {
+            "objectName": "Yes"
+          },
+          {
+            "objectName": "____text"
+          },
+          {
+            "objectName": "No"
+          },
+          {
+            "objectName": "Screen_dim"
+          },
+          {
+            "objectName": "Button_back"
+          }
+        ]
+      },
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "IsCursorOnObject"
+              },
+              "parameters": [
+                "Button_back",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "MouseButtonFromTextPressed"
+              },
+              "parameters": [
+                "",
+                "\"Left\""
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Scene"
+              },
+              "parameters": [
+                "",
+                "\"Game Menu\"",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "IsCursorOnObject"
+              },
+              "parameters": [
+                "Yes",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "MouseButtonFromTextPressed"
+              },
+              "parameters": [
+                "",
+                "\"Left\""
+              ]
+            },
+            {
+              "type": {
+                "value": "NumberVariable"
+              },
+              "parameters": [
+                "Audio_Enabled",
+                "=",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "Audio_Enabled",
+                "=",
+                "0"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "IsCursorOnObject"
+              },
+              "parameters": [
+                "Yes",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "MouseButtonFromTextPressed"
+              },
+              "parameters": [
+                "",
+                "\"Left\""
+              ]
+            },
+            {
+              "type": {
+                "value": "NumberVariable"
+              },
+              "parameters": [
+                "Audio_Enabled",
+                "=",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "Audio_Enabled",
+                "=",
+                "1"
+              ]
+            }
+          ]
+        }
+      ],
+      "layers": [
+        {
+          "ambientLightColorB": 200,
+          "ambientLightColorG": 200,
+          "ambientLightColorR": 200,
+          "camera2DPlaneMaxDrawingDistance": 5000,
+          "camera3DFarPlaneDistance": 10000,
+          "camera3DFieldOfView": 45,
+          "camera3DNearPlaneDistance": 3,
+          "cameraType": "",
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "isLocked": false,
+          "name": "",
+          "renderingType": "",
+          "visibility": true,
+          "cameras": [
+            {
+              "defaultSize": true,
+              "defaultViewport": true,
+              "height": 0,
+              "viewportBottom": 1,
+              "viewportLeft": 0,
+              "viewportRight": 1,
+              "viewportTop": 0,
+              "width": 0
+            }
+          ],
+          "effects": [
+            {
+              "effectType": "Scene3D::HemisphereLight",
+              "name": "3D Ambient Hemisphere Light",
+              "doubleParameters": {
+                "elevation": 40,
+                "intensity": 0.33,
+                "rotation": 300
+              },
+              "stringParameters": {
+                "groundColor": "127;127;127",
+                "skyColor": "255;255;255",
+                "top": "Z+"
+              },
+              "booleanParameters": {}
+            },
+            {
+              "effectType": "Scene3D::DirectionalLight",
+              "name": "3D Sun Light",
+              "doubleParameters": {
+                "distanceFromCamera": 1500,
+                "elevation": 40,
+                "frustumSize": 4000,
+                "intensity": 0.75,
+                "minimumShadowBias": 0,
+                "rotation": 300
+              },
+              "stringParameters": {
+                "color": "255;255;255",
+                "shadowQuality": "medium",
+                "top": "Z+"
+              },
+              "booleanParameters": {
+                "isCastingShadow": true
+              }
+            }
+          ]
+        }
+      ],
+      "behaviorsSharedData": [
+        {
+          "name": "Effect",
+          "type": "EffectCapability::EffectBehavior"
+        },
+        {
+          "name": "Opacity",
+          "type": "OpacityCapability::OpacityBehavior"
+        },
+        {
+          "name": "Resizable",
+          "type": "ResizableCapability::ResizableBehavior"
+        },
+        {
+          "name": "Scale",
+          "type": "ScalableCapability::ScalableBehavior"
+        },
+        {
+          "name": "Text",
+          "type": "TextContainerCapability::TextContainerBehavior"
+        }
+      ]
+    },
     {
       "b": 224,
       "disableInputWhenNotFocused": true,
-      "mangledName": "Untitled_32scene",
-      "name": "Untitled scene",
+      "mangledName": "Level_321",
+      "name": "Level 1",
       "r": 224,
       "standardSortMethod": true,
       "stopSoundsOnStartup": true,
@@ -722,7 +2166,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 0.6244537826600003,
+        "zoomFactor": 0.7130377630690412,
         "windowMask": false,
         "selectedLayer": "",
         "gameEditorMode": "instances-editor"
@@ -3670,7 +5114,7 @@
               },
               "parameters": [
                 "",
-                "\"Untitled scene\"",
+                "\"Level 1\"",
                 ""
               ]
             }
