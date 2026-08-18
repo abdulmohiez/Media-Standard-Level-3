@@ -1086,6 +1086,22 @@
         "name": "Platform_JumpThrough.png2",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "file": "Gun1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Gun1.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Bullet.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Bullet.png",
+        "smoothed": false,
+        "userAdded": false
       }
     ]
   },
@@ -2979,7 +2995,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 1.3841198046306877,
+        "zoomFactor": 1.6337626779315035,
         "windowMask": false,
         "selectedLayer": "",
         "gameEditorMode": "instances-editor"
@@ -2996,13 +3012,14 @@
       "instances": [
         {
           "angle": 0,
-          "customSize": false,
-          "height": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 32,
           "keepRatio": true,
           "layer": "",
           "name": "Player",
           "persistentUuid": "f62a8e5c-175b-4aaa-9e48-e8c4c71b5f27",
-          "width": 0,
+          "width": 32,
           "x": 16,
           "y": 400,
           "zOrder": 38,
@@ -3728,8 +3745,8 @@
           "name": "Enemy",
           "persistentUuid": "592a7d57-6f28-4e6b-85ac-354fb71fb250",
           "width": 0,
-          "x": 360,
-          "y": 408,
+          "x": 176,
+          "y": 392,
           "zOrder": 48,
           "numberProperties": [],
           "stringProperties": [],
@@ -3744,7 +3761,7 @@
           "name": "Enemy",
           "persistentUuid": "56f4ebe4-62cb-4e9c-b82e-c0f36166a468",
           "width": 0,
-          "x": 448,
+          "x": 456,
           "y": 408,
           "zOrder": 49,
           "numberProperties": [],
@@ -3764,6 +3781,88 @@
           "x": -16,
           "y": 0,
           "zOrder": 50,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "PatrolSide1",
+          "persistentUuid": "77181b28-b834-4c59-88b5-a4b8501c530b",
+          "width": 0,
+          "x": 528,
+          "y": 304,
+          "zOrder": 51,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "PatrolSide1",
+          "persistentUuid": "9e1210b8-8141-485c-a698-c6d41eda3e0c",
+          "width": 0,
+          "x": 320,
+          "y": 400,
+          "zOrder": 35,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "PatrolSide2",
+          "persistentUuid": "acc0dc59-e16b-4e07-a547-4ded61f887ca",
+          "width": 0,
+          "x": 480,
+          "y": 400,
+          "zOrder": 35,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 16,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Platform_Stone",
+          "persistentUuid": "58341ec7-cbc7-429b-8578-27fa2b1c7689",
+          "width": 32,
+          "x": 208,
+          "y": 368,
+          "zOrder": 52,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 16,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Weapon",
+          "persistentUuid": "dfb3131b-b79a-43f7-997f-1d89f2b8760e",
+          "width": 16,
+          "x": 32,
+          "y": 416,
+          "zOrder": 38,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -5091,6 +5190,22 @@
           "effects": [],
           "behaviors": [
             {
+              "acceleration": 400,
+              "allowDiagonals": true,
+              "angleOffset": 0,
+              "angularMaxSpeed": 180,
+              "cellHeight": 20,
+              "cellWidth": 20,
+              "extraBorder": 0,
+              "gridOffsetX": 0,
+              "gridOffsetY": 0,
+              "maxSpeed": 200,
+              "name": "Pathfinding",
+              "rotateObject": true,
+              "smoothingMaxCellGap": 1,
+              "type": "PathfindingBehavior::PathfindingBehavior"
+            },
+            {
               "name": "Platform",
               "type": "PlatformBehavior::PlatformBehavior",
               "canBeGrabbed": true,
@@ -5244,9 +5359,38 @@
           "persistentUuid": "aa0d61f3-0b02-4e38-b0f7-cac53053d95b",
           "type": "Sprite",
           "updateIfNotVisible": false,
-          "variables": [],
+          "variables": [
+            {
+              "name": "Target_Point",
+              "persistentUuid": "0a40292b-35e7-42cc-8707-c53f06f3e5a9",
+              "type": "string",
+              "value": "PatrolPoint1"
+            },
+            {
+              "name": "HP",
+              "persistentUuid": "186aa82d-d83c-4706-b2c9-0a621c8e3368",
+              "type": "number",
+              "value": 100
+            }
+          ],
           "effects": [],
           "behaviors": [
+            {
+              "acceleration": 250,
+              "allowDiagonals": true,
+              "angleOffset": 0,
+              "angularMaxSpeed": 180,
+              "cellHeight": 20,
+              "cellWidth": 20,
+              "extraBorder": 0,
+              "gridOffsetX": 0,
+              "gridOffsetY": 0,
+              "maxSpeed": 90,
+              "name": "Pathfinding",
+              "rotateObject": false,
+              "smoothingMaxCellGap": 1,
+              "type": "PathfindingBehavior::PathfindingBehavior"
+            },
             {
               "name": "PlatformerObject",
               "type": "PlatformBehavior::PlatformerObjectBehavior",
@@ -5699,6 +5843,263 @@
               ]
             }
           ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "PatrolSide1",
+          "persistentUuid": "745101a8-c0b5-43f1-b70e-6db311477651",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Background7.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 16,
+                            "y": 0
+                          },
+                          {
+                            "x": 16,
+                            "y": 16
+                          },
+                          {
+                            "x": 0,
+                            "y": 16
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "PatrolSide2",
+          "persistentUuid": "f76379b6-909f-41af-b610-78746c6776d2",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Background7.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 16,
+                            "y": 0
+                          },
+                          {
+                            "x": 16,
+                            "y": 16
+                          },
+                          {
+                            "x": 0,
+                            "y": 16
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "Weapon",
+          "persistentUuid": "3befb165-85d9-4297-a507-0ccca6708bf6",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "Sticker",
+              "type": "Sticker::Sticker",
+              "OnlyFollowPosition": false,
+              "IsDestroyedWithParent": false
+            }
+          ],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Gun1.png",
+                      "points": [
+                        {
+                          "name": "Guntip",
+                          "x": 26,
+                          "y": 6
+                        }
+                      ],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 7,
+                            "y": 5
+                          },
+                          {
+                            "x": 26,
+                            "y": 5
+                          },
+                          {
+                            "x": 26,
+                            "y": 13
+                          },
+                          {
+                            "x": 7,
+                            "y": 13
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "Bullet",
+          "persistentUuid": "5405d474-e387-4885-9028-2aef2333f484",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Bullet.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 1
+                          },
+                          {
+                            "x": 8,
+                            "y": 1
+                          },
+                          {
+                            "x": 8,
+                            "y": 7
+                          },
+                          {
+                            "x": 0,
+                            "y": 7
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "objectsFolderStructure": {
@@ -5708,10 +6109,16 @@
             "objectName": "Player"
           },
           {
+            "objectName": "Enemy"
+          },
+          {
             "objectName": "Boundary"
           },
           {
-            "objectName": "Enemy"
+            "objectName": "PatrolSide1"
+          },
+          {
+            "objectName": "PatrolSide2"
           },
           {
             "objectName": "Platform_Dirt"
@@ -5720,13 +6127,19 @@
             "objectName": "Platform_Dirt2"
           },
           {
-            "objectName": "Gold_Coin"
-          },
-          {
             "objectName": "Platform_Stone"
           },
           {
             "objectName": "Platform_Stone2"
+          },
+          {
+            "objectName": "Weapon"
+          },
+          {
+            "objectName": "Bullet"
+          },
+          {
+            "objectName": "Gold_Coin"
           },
           {
             "objectName": "Platform_Bridge"
@@ -5767,6 +6180,18 @@
         ]
       },
       "events": [
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Basic Game Mechanics (Sound and Camera)"
+        },
         {
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
@@ -5913,6 +6338,7 @@
           ]
         },
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -6009,6 +6435,18 @@
               ]
             }
           ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Game Features"
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -6285,7 +6723,192 @@
         {
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "PathfindingBehavior::SetDestination"
+              },
+              "parameters": [
+                "Enemy",
+                "Pathfinding",
+                "",
+                "Player.X()",
+                "Player.Y()"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "Distance"
+              },
+              "parameters": [
+                "Enemy",
+                "Player",
+                "250",
+                ""
+              ]
+            }
+          ],
           "actions": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "RotateTowardPosition"
+              },
+              "parameters": [
+                "Weapon",
+                "MouseX()",
+                "MouseY()",
+                "0",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "SceneJustBegins"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Sticker::Sticker::Stick"
+              },
+              "parameters": [
+                "Weapon",
+                "Sticker",
+                "Player",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "MouseButtonFromTextPressed"
+              },
+              "parameters": [
+                "",
+                "\"Left\""
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Create"
+              },
+              "parameters": [
+                "",
+                "Bullet",
+                "Weapon.X(\"Guntip\")",
+                "Weapon.Y(\"Guntip\")",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "AddForceAL"
+              },
+              "parameters": [
+                "Bullet",
+                "Weapon.Angle()",
+                "300",
+                "1"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "Bullet",
+                "Enemy",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetNumberObjectVariable"
+              },
+              "parameters": [
+                "Enemy",
+                "HP",
+                "-",
+                "25"
+              ]
+            },
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "Bullet",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "NumberObjectVariable"
+              },
+              "parameters": [
+                "Enemy",
+                "HP",
+                "<",
+                "0"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "Enemy",
+                ""
+              ]
+            }
+          ]
         }
       ],
       "layers": [
@@ -6427,6 +7050,10 @@
           "type": "OpacityCapability::OpacityBehavior"
         },
         {
+          "name": "Pathfinding",
+          "type": "PathfindingBehavior::PathfindingBehavior"
+        },
+        {
           "name": "Platform",
           "type": "PlatformBehavior::PlatformBehavior"
         },
@@ -6453,6 +7080,10 @@
         {
           "name": "SmoothCamera",
           "type": "SmoothCamera::SmoothCamera"
+        },
+        {
+          "name": "Sticker",
+          "type": "Sticker::Sticker"
         },
         {
           "name": "Text",
@@ -17634,6 +18265,702 @@
               },
               {
                 "propertyName": "Flippable"
+              }
+            ]
+          }
+        }
+      ],
+      "eventsBasedObjects": []
+    },
+    {
+      "author": "D8H",
+      "category": "Movement",
+      "dimension": "2D",
+      "extensionNamespace": "",
+      "fullName": "Stick objects to others",
+      "gdevelopVersion": ">=5.5.222",
+      "helpPath": "",
+      "iconUrl": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0ibWRpLXN0aWNrZXItb3V0bGluZSIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGQ9Ik01LjUgMkMzLjYgMiAyIDMuNiAyIDUuNVYxOC41QzIgMjAuNCAzLjYgMjIgNS41IDIySDE2TDIyIDE2VjUuNUMyMiAzLjYgMjAuNCAyIDE4LjUgMkg1LjVNNS44IDRIMTguM0MxOS4zIDQgMjAuMSA0LjggMjAuMSA1LjhWMTVIMTguNkMxNi43IDE1IDE1LjEgMTYuNiAxNS4xIDE4LjVWMjBINS44QzQuOCAyMCA0IDE5LjIgNCAxOC4yVjUuOEM0IDQuOCA0LjggNCA1LjggNCIgLz48L3N2Zz4=",
+      "name": "Sticker",
+      "previewIconUrl": "https://resources.gdevelop-app.com/assets/Icons/sticker-outline.svg",
+      "shortDescription": "Stick objects to others, following position and rotation. For accessories/skeletons.",
+      "version": "0.5.4",
+      "description": [
+        "This extension can be useful to:",
+        "- Stick accessories to moving objects",
+        "- Animate a skeleton",
+        "- Delete an object with another one",
+        "",
+        "An example allows to check it out ([open the project online](https://editor.gdevelop.io/?project=example://stick-objects))."
+      ],
+      "origin": {
+        "identifier": "Sticker",
+        "name": "gdevelop-extension-store"
+      },
+      "tags": [
+        "sticker",
+        "stick",
+        "follow",
+        "skeleton",
+        "joint",
+        "pin",
+        "bind",
+        "glue",
+        "tie",
+        "attach",
+        "hold",
+        "paste",
+        "wear"
+      ],
+      "authorIds": [
+        "IWykYNRvhCZBN3vEgKEbBPOR3Oc2"
+      ],
+      "dependencies": [],
+      "globalVariables": [],
+      "sceneVariables": [],
+      "eventsFunctions": [
+        {
+          "description": "Define helper classes JavaScript code.",
+          "fullName": "Define helper classes",
+          "functionType": "Action",
+          "name": "DefineHelperClasses",
+          "private": true,
+          "sentence": "Define helper classes JavaScript code",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::JsCode",
+              "inlineCode": [
+                "if (gdjs._stickerExtension) {",
+                "    return;",
+                "}",
+                "",
+                "// Unstick from deleted objects.",
+                "gdjs.registerObjectDeletedFromSceneCallback(function (runtimeScene, deletedObject) {",
+                "    const extension = runtimeScene._stickerExtension;",
+                "    if (!extension) {",
+                "        return;",
+                "    }",
+                "    /** @type {Set<gdjs.RuntimeBehavior>} */",
+                "    const allStickers = runtimeScene._stickerExtension.allStickers;",
+                "    for (const behavior of allStickers) {",
+                "        /** @type {Sticker} */",
+                "        const sticker = behavior._sticker;",
+                "        if (sticker.isStuckTo(deletedObject)) {",
+                "            if (behavior._getIsDestroyedWithParent()) {",
+                "                behavior.owner.deleteFromScene(runtimeScene);",
+                "            }",
+                "            sticker.unstick();",
+                "        }",
+                "    }",
+                "});",
+                "",
+                "class Sticker {",
+                "    /** @type {gdjs.RuntimeBehavior} */",
+                "    behavior;",
+                "    /** @type {gdjs.RuntimeObject | null} */",
+                "    basisObject;",
+                "    followingDoneThisFrame = false;",
+                "    relativeX = 0;",
+                "    relativeY = 0;",
+                "    relativeAngle = 0;",
+                "    relativeRotatedX = 0;",
+                "    relativeRotatedY = 0;",
+                "    basisOldX = 0;",
+                "    basisOldY = 0;",
+                "    basisOldAngle = 0;",
+                "    basisOldWidth = 0;",
+                "    basisOldHeight = 0;",
+                "    basisOldCenterXInScene = 0;",
+                "    basisOldCenterYInScene = 0;",
+                "",
+                "    /**",
+                "     * @param {gdjs.RuntimeBehavior} behavior",
+                "     */",
+                "    constructor(behavior) {",
+                "        this.behavior = behavior;",
+                "    }",
+                "",
+                "    /**",
+                "     * @param {gdjs.RuntimeObject} basisObject",
+                "     */",
+                "    isStuckTo(basisObject) {",
+                "        return this.basisObject === basisObject;",
+                "    }",
+                "",
+                "    /**",
+                "     * @param {gdjs.RuntimeObject} basisObject",
+                "     */",
+                "    stickTo(basisObject) {",
+                "        this.basisObject = basisObject;",
+                "        this.updateOldCoordinates();",
+                "        this.updateRelativeCoordinates();",
+                "    }",
+                "",
+                "    unstick() {",
+                "        this.basisObject = null;",
+                "    }",
+                "",
+                "    onStepPreEvents() {",
+                "        this.followingDoneThisFrame = false;",
+                "    }",
+                "",
+                "    /**",
+                "     * Update the coordinates in the basisObject basis.",
+                "     * ",
+                "     * It uses the basisObject coordinates from the previous frame.",
+                "     * This way, the sticker can move relatively to it and still",
+                "     * follow basisObject.",
+                "     * ",
+                "     * @param {gdjs.RuntimeObject} basisObject",
+                "     */",
+                "    updateRelativeCoordinates() {",
+                "        const object = this.behavior.owner;",
+                "",
+                "        // Update relative coordinates",
+                "        this.relativeX = object.getX() - this.basisOldX;",
+                "        this.relativeY = object.getY() - this.basisOldY;",
+                "        if (!this.behavior._getOnlyFollowPosition()) {",
+                "            this.relativeAngle = object.getAngle() - this.basisOldAngle;",
+                "            this.relativeWidth = object.getWidth() / this.basisOldWidth;",
+                "            this.relativeHeight = object.getHeight() / this.basisOldHeight;",
+                "            const deltaX = object.getCenterXInScene() - this.basisOldCenterXInScene;",
+                "            const deltaY = object.getCenterYInScene() - this.basisOldCenterYInScene;",
+                "            const angle = this.basisOldAngle * Math.PI / 180;",
+                "            const cosA = Math.cos(angle);",
+                "            const sinA = Math.sin(angle);",
+                "            this.relativeRotatedX = (deltaX * cosA + deltaY * sinA) / this.basisOldWidth;",
+                "            this.relativeRotatedY = (-deltaX * sinA + deltaY * cosA) / this.basisOldHeight;",
+                "",
+                "            // Save initial values to avoid calculus and rounding errors",
+                "            this.basisOriginalWidth = this.basisObject.getWidth();",
+                "            this.basisOriginalHeight = this.basisObject.getHeight();",
+                "            this.basisOriginalAngle = this.basisObject.getAngle();",
+                "        }",
+                "    }",
+                "",
+                "    /**",
+                "     * Copy the coordinates to use it the next frame.",
+                "     */",
+                "    updateOldCoordinates() {",
+                "        const object = this.behavior.owner;",
+                "",
+                "        this.ownerOldX = object.getX();",
+                "        this.ownerOldY = object.getY();",
+                "",
+                "        this.basisOldX = this.basisObject.getX();",
+                "        this.basisOldY = this.basisObject.getY();",
+                "",
+                "        if (!this.behavior._getOnlyFollowPosition()) {",
+                "            this.ownerOldAngle = object.getAngle();",
+                "            this.ownerOldWidth = object.getWidth();",
+                "            this.ownerOldHeight = object.getHeight();",
+                "",
+                "            this.basisOldAngle = this.basisObject.getAngle();",
+                "            this.basisOldWidth = this.basisObject.getWidth();",
+                "            this.basisOldHeight = this.basisObject.getHeight();",
+                "            this.basisOldCenterXInScene = this.basisObject.getCenterXInScene();",
+                "            this.basisOldCenterYInScene = this.basisObject.getCenterYInScene();",
+                "        }",
+                "    }",
+                "",
+                "    /**",
+                "     * Follow the basisObject (called in doStepPostEvents).",
+                "     * ",
+                "     * This method is also called by children to ensure",
+                "     * parents are updated first.",
+                "     */",
+                "    followBasisObject() {",
+                "        if (this.followingDoneThisFrame) {",
+                "            return;",
+                "        }",
+                "        this.followingDoneThisFrame = true;",
+                "        const basisObject = this.basisObject;",
+                "        if (!basisObject) {",
+                "            return;",
+                "        }",
+                "        // If the behavior on the basis object has a different name,",
+                "        // the objects will still follow their basis objects",
+                "        // but frame delays could happen.",
+                "        const behaviorName = this.behavior.getName();",
+                "        if (basisObject.hasBehavior(behaviorName)) {",
+                "            const basisBehavior = basisObject.getBehavior(behaviorName);",
+                "            if (basisBehavior.type === this.behavior.type) {",
+                "                // Follow parents 1st to avoid frame delays",
+                "                basisBehavior._sticker.followBasisObject();",
+                "            }",
+                "        }",
+                "        if (this.behavior._getOnlyFollowPosition()) {",
+                "            this.followPosition();",
+                "        } else {",
+                "            this.followTransformation();",
+                "        }",
+                "        this.updateOldCoordinates();",
+                "    }",
+                "",
+                "    followPosition() {",
+                "        const object = this.behavior.owner;",
+                "        const basisObject = this.basisObject;",
+                "        if (!basisObject) {",
+                "            return;",
+                "        }",
+                "        if (object.getX() !== this.ownerOldX",
+                "            || object.getY() !== this.ownerOldY) {",
+                "            this.updateRelativeCoordinates();",
+                "        }",
+                "        if (this.basisOldX !== basisObject.getX()",
+                "            || this.basisOldY !== basisObject.getY()) {",
+                "            object.setPosition(",
+                "                basisObject.getX() + this.relativeX,",
+                "                basisObject.getY() + this.relativeY);",
+                "        }",
+                "    }",
+                "",
+                "    followTransformation() {",
+                "        const object = this.behavior.owner;",
+                "        const basisObject = this.basisObject;",
+                "        if (!basisObject) {",
+                "            return;",
+                "        }",
+                "        if (object.getX() !== this.ownerOldX",
+                "            || object.getY() !== this.ownerOldY",
+                "            || object.getAngle() !== this.ownerOldAngle",
+                "            || object.getWidth() !== this.ownerOldWidth",
+                "            || object.getHeight() !== this.ownerOldHeight) {",
+                "            this.updateRelativeCoordinates();",
+                "        }",
+                "        if (this.basisOldAngle !== this.basisObject.getAngle()",
+                "            || this.basisOldWidth !== this.basisObject.getWidth()",
+                "            || this.basisOldHeight !== this.basisObject.getHeight()",
+                "            || this.basisOldCenterXInScene !== this.basisObject.getCenterXInScene()",
+                "            || this.basisOldCenterYInScene !== this.basisObject.getCenterYInScene()) {",
+                "            // Unproportional dimensions changes won't work as expected",
+                "            // if the object angle is not null but nothing more can be done",
+                "            // because there is no full affine transformation on objects.",
+                "            if (basisObject.getWidth() !== this.basisOriginalWidth) {",
+                "                object.setWidth(this.relativeWidth * basisObject.getWidth());",
+                "            }",
+                "            if (basisObject.getHeight() !== this.basisOriginalHeight) {",
+                "                object.setHeight(this.relativeHeight * basisObject.getHeight());",
+                "            }",
+                "            // Follow basisObject",
+                "            if (basisObject.getAngle() === this.basisOriginalAngle",
+                "                && this.basisOriginalAngle === 0) {",
+                "                if (basisObject.getWidth() === this.basisOriginalWidth",
+                "                    || basisObject.getHeight() === this.basisOriginalHeight) {",
+                "                    if (this.basisOldX !== basisObject.getX() ||",
+                "                        this.basisOldY !== basisObject.getY()) {",
+                "                        object.setPosition(",
+                "                            basisObject.getX() + this.relativeX,",
+                "                            basisObject.getY() + this.relativeY);",
+                "                    }",
+                "                } else {",
+                "                    object.setCenterPositionInScene(",
+                "                        basisObject.getCenterXInScene() + this.relativeRotatedX * basisObject.getWidth(),",
+                "                        basisObject.getCenterYInScene() + this.relativeRotatedY * basisObject.getHeight());",
+                "                }",
+                "            } else {",
+                "                object.setAngle(basisObject.getAngle() + this.relativeAngle);",
+                "",
+                "                const deltaX = this.relativeRotatedX * basisObject.getWidth();",
+                "                const deltaY = this.relativeRotatedY * basisObject.getHeight();",
+                "                const angle = -basisObject.getAngle() * Math.PI / 180;",
+                "                const cosA = Math.cos(angle);",
+                "                const sinA = Math.sin(angle);",
+                "                object.setX(",
+                "                    basisObject.getCenterXInScene() + object.getX() - object.getCenterXInScene()",
+                "                    + deltaX * cosA + deltaY * sinA);",
+                "                object.setY(",
+                "                    basisObject.getCenterYInScene() + object.getY() - object.getCenterYInScene()",
+                "                    - deltaX * sinA + deltaY * cosA);",
+                "            }",
+                "        }",
+                "    }",
+                "}",
+                "",
+                "gdjs._stickerExtension = {",
+                "    Sticker",
+                "}"
+              ],
+              "parameterObjects": "",
+              "useStrict": true,
+              "eventsSheetExpanded": true
+            }
+          ],
+          "parameters": [],
+          "objectGroups": []
+        },
+        {
+          "description": "Check if the object is stuck to another object.",
+          "fullName": "Is stuck to another object",
+          "functionType": "Condition",
+          "name": "IsStuck",
+          "sentence": "_PARAM1_ is stuck to _PARAM3_",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::JsCode",
+              "inlineCode": [
+                "const stickerBehaviorName = eventsFunctionContext.getBehaviorName(\"Behavior\");",
+                "/** @type {Hashtable<gdjs.RuntimeObject[]>} */",
+                "const stickerObjectsLists = eventsFunctionContext.getObjectsLists(\"Object\");",
+                "/** @type {Hashtable<gdjs.RuntimeObject[]>} */",
+                "const basisObjectsLists = eventsFunctionContext.getObjectsLists(\"BasisObject\");",
+                "",
+                "eventsFunctionContext.returnValue = gdjs.evtTools.object.twoListsTest(",
+                "  (stickerObject, basisObject) => {",
+                "    const sticker = stickerObject.getBehavior(stickerBehaviorName)._sticker;",
+                "    return sticker.isStuckTo(basisObject);",
+                "  },",
+                "  stickerObjectsLists,",
+                "  basisObjectsLists,",
+                "  false",
+                ");"
+              ],
+              "parameterObjects": "",
+              "useStrict": true,
+              "eventsSheetExpanded": true
+            }
+          ],
+          "parameters": [
+            {
+              "description": "Sticker",
+              "name": "Object",
+              "type": "objectList"
+            },
+            {
+              "description": "Sticker behavior",
+              "name": "Behavior",
+              "supplementaryInformation": "Sticker::Sticker",
+              "type": "behavior"
+            },
+            {
+              "description": "Basis",
+              "name": "BasisObject",
+              "type": "objectList"
+            }
+          ],
+          "objectGroups": []
+        }
+      ],
+      "eventsFunctionsFolderStructure": {
+        "folderName": "__ROOT",
+        "children": [
+          {
+            "functionName": "DefineHelperClasses"
+          },
+          {
+            "functionName": "IsStuck"
+          }
+        ]
+      },
+      "eventsBasedBehaviors": [
+        {
+          "description": "Stick the object to another. Use the action to stick the object, or unstick it later.",
+          "fullName": "Sticker",
+          "helpPath": "",
+          "iconUrl": "",
+          "name": "Sticker",
+          "objectType": "",
+          "previewIconUrl": "",
+          "quickCustomizationVisibility": "hidden",
+          "eventsFunctions": [
+            {
+              "fullName": "",
+              "functionType": "Action",
+              "name": "onCreated",
+              "sentence": "",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Sticker::DefineHelperClasses"
+                      },
+                      "parameters": [
+                        "",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": [
+                    "const Sticker = gdjs._stickerExtension.Sticker;",
+                    "",
+                    "const behaviorName = eventsFunctionContext.getBehaviorName(\"Behavior\");",
+                    "const object = objects[0];",
+                    "const behavior = object.getBehavior(behaviorName);",
+                    "",
+                    "behavior._sticker = new Sticker(behavior);",
+                    "",
+                    "// Set up the scene sticker objects list - if not done already.",
+                    "runtimeScene._stickerExtension = runtimeScene._stickerExtension || {",
+                    "    allStickers: new Set(),",
+                    "};",
+                    "// Register this object as a sticker.",
+                    "/** @type {Set<gdjs.RuntimeBehavior>} */",
+                    "const allStickers = runtimeScene._stickerExtension.allStickers;",
+                    "allStickers.add(behavior);",
+                    ""
+                  ],
+                  "parameterObjects": "Object",
+                  "useStrict": true,
+                  "eventsSheetExpanded": true
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "Sticker::Sticker",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "fullName": "",
+              "functionType": "Action",
+              "name": "doStepPreEvents",
+              "sentence": "",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": [
+                    "const behaviorName = eventsFunctionContext.getBehaviorName(\"Behavior\");",
+                    "const object = objects[0];",
+                    "const behavior = object.getBehavior(behaviorName);",
+                    "",
+                    "behavior._sticker.onStepPreEvents();"
+                  ],
+                  "parameterObjects": "Object",
+                  "useStrict": true,
+                  "eventsSheetExpanded": false
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "Sticker::Sticker",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "fullName": "",
+              "functionType": "Action",
+              "name": "doStepPostEvents",
+              "sentence": "",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": [
+                    "const behaviorName = eventsFunctionContext.getBehaviorName(\"Behavior\");",
+                    "const object = objects[0];",
+                    "const behavior = object.getBehavior(behaviorName);",
+                    "",
+                    "behavior._sticker.followBasisObject();"
+                  ],
+                  "parameterObjects": "Object",
+                  "useStrict": true,
+                  "eventsSheetExpanded": true
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "Sticker::Sticker",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "Stick on another object.",
+              "fullName": "Stick",
+              "functionType": "Action",
+              "name": "Stick",
+              "sentence": "Stick _PARAM0_ to _PARAM2_",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": [
+                    "const object = objects[0];",
+                    "const behaviorName = eventsFunctionContext.getBehaviorName(\"Behavior\");",
+                    "const basisObjects = eventsFunctionContext.getObjects(\"BasisObject\");",
+                    "",
+                    "if (basisObjects.length === 0) return;",
+                    "// An object can stick to only one object.",
+                    "const basisObject = basisObjects[0];",
+                    "object.getBehavior(behaviorName)._sticker.stickTo(basisObject);",
+                    ""
+                  ],
+                  "parameterObjects": "Object",
+                  "useStrict": true,
+                  "eventsSheetExpanded": true
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "Sticker::Sticker",
+                  "type": "behavior"
+                },
+                {
+                  "description": "Object to stick to",
+                  "name": "BasisObject",
+                  "type": "objectList"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "Unstick from the object it was stuck to.",
+              "fullName": "Unstick",
+              "functionType": "Action",
+              "name": "Unstick",
+              "sentence": "Unstick _PARAM0_",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": [
+                    "const object = objects[0];",
+                    "const behaviorName = eventsFunctionContext.getBehaviorName(\"Behavior\");",
+                    "const behavior = object.getBehavior(behaviorName);",
+                    "",
+                    "object.getBehavior(behaviorName)._sticker.unstick();",
+                    ""
+                  ],
+                  "parameterObjects": "Object",
+                  "useStrict": true,
+                  "eventsSheetExpanded": true
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "Sticker::Sticker",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "fullName": "",
+              "functionType": "Action",
+              "name": "onDestroy",
+              "sentence": "",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": [
+                    "const behaviorName = eventsFunctionContext.getBehaviorName(\"Behavior\");",
+                    "const object = objects[0];",
+                    "const behavior = object.getBehavior(behaviorName);",
+                    "",
+                    "/** @type {Set<gdjs.RuntimeBehavior>} */",
+                    "const allStickers = runtimeScene._stickerExtension.allStickers;",
+                    "allStickers.delete(behavior);",
+                    ""
+                  ],
+                  "parameterObjects": "Object",
+                  "useStrict": true,
+                  "eventsSheetExpanded": true
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "Sticker::Sticker",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            }
+          ],
+          "eventsFunctionsFolderStructure": {
+            "folderName": "__ROOT",
+            "children": [
+              {
+                "functionName": "onCreated"
+              },
+              {
+                "functionName": "doStepPreEvents"
+              },
+              {
+                "functionName": "doStepPostEvents"
+              },
+              {
+                "functionName": "Stick"
+              },
+              {
+                "functionName": "Unstick"
+              },
+              {
+                "functionName": "onDestroy"
+              }
+            ]
+          },
+          "propertyDescriptors": [
+            {
+              "value": "",
+              "type": "Boolean",
+              "label": "Only follow the position",
+              "name": "OnlyFollowPosition"
+            },
+            {
+              "value": "",
+              "type": "Boolean",
+              "label": "Destroy when the object it's stuck on is destroyed",
+              "name": "IsDestroyedWithParent"
+            }
+          ],
+          "propertiesFolderStructure": {
+            "folderName": "__ROOT",
+            "children": [
+              {
+                "propertyName": "OnlyFollowPosition"
+              },
+              {
+                "propertyName": "IsDestroyedWithParent"
               }
             ]
           }
