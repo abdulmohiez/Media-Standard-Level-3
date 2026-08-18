@@ -1102,6 +1102,76 @@
         "name": "Bullet.png",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "file": "audiomass-jump.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "audiomass-jump.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "audiomass-hit.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "audiomass-hit.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "hitHurt.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "hitHurt.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "hitHurt2.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "hitHurt2.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "audiomass-hit (1).mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "audiomass-hit (1).mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "audiomass-output.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "audiomass-output.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "laserShoot.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "laserShoot.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
       }
     ]
   },
@@ -3837,14 +3907,14 @@
           "angle": 0,
           "customSize": true,
           "depth": 1,
-          "height": 16,
+          "height": 1,
           "keepRatio": true,
           "layer": "",
           "name": "Platform_Stone",
           "persistentUuid": "58341ec7-cbc7-429b-8578-27fa2b1c7689",
           "width": 32,
           "x": 208,
-          "y": 368,
+          "y": 384,
           "zOrder": 52,
           "numberProperties": [],
           "stringProperties": [],
@@ -5376,7 +5446,7 @@
           "effects": [],
           "behaviors": [
             {
-              "acceleration": 250,
+              "acceleration": 350,
               "allowDiagonals": true,
               "angleOffset": 0,
               "angularMaxSpeed": 180,
@@ -5385,7 +5455,7 @@
               "extraBorder": 0,
               "gridOffsetX": 0,
               "gridOffsetY": 0,
-              "maxSpeed": 90,
+              "maxSpeed": 100,
               "name": "Pathfinding",
               "rotateObject": false,
               "smoothingMaxCellGap": 1,
@@ -6253,7 +6323,7 @@
                 "time_for_adventure.mp3",
                 "0",
                 "yes",
-                "40",
+                "25",
                 "1"
               ]
             }
@@ -6501,7 +6571,7 @@
               },
               "parameters": [
                 "",
-                "coin.wav",
+                "audiomass-output.mp3",
                 "",
                 "50",
                 "1"
@@ -6705,7 +6775,7 @@
                 "value": "Wait"
               },
               "parameters": [
-                "2"
+                "1"
               ]
             },
             {
@@ -6841,6 +6911,18 @@
                 "300",
                 "1"
               ]
+            },
+            {
+              "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "laserShoot.wav",
+                "",
+                "50",
+                "1"
+              ]
             }
           ]
         },
@@ -6909,6 +6991,40 @@
               ]
             }
           ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyFromTextPressed"
+              },
+              "parameters": [
+                "Player",
+                "\"Space\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PlaySoundOnChannel"
+              },
+              "parameters": [
+                "",
+                "audiomass-jump.mp3",
+                "1",
+                "no",
+                "40",
+                "1"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": []
         }
       ],
       "layers": [
