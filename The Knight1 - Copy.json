@@ -1172,6 +1172,22 @@
         "preloadAsSound": false,
         "preloadInCache": false,
         "userAdded": false
+      },
+      {
+        "file": "assets/NewTiledSprite.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"pskl\":{}}",
+        "name": "NewTiledSprite",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/NewTiledSprite2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"pskl\":{}}",
+        "name": "NewTiledSprite2",
+        "smoothed": false,
+        "userAdded": false
       }
     ]
   },
@@ -3065,7 +3081,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 1.6337626779315035,
+        "zoomFactor": 0.7130377630690424,
         "windowMask": false,
         "selectedLayer": "",
         "gameEditorMode": "instances-editor"
@@ -3092,7 +3108,7 @@
           "width": 32,
           "x": 16,
           "y": 400,
-          "zOrder": 38,
+          "zOrder": 49,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -3492,9 +3508,9 @@
           "name": "Enemy",
           "persistentUuid": "c026317e-0405-4033-8ca1-d8f04f96653b",
           "width": 0,
-          "x": 784,
+          "x": 808,
           "y": 360,
-          "zOrder": 16,
+          "zOrder": 49,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -3508,7 +3524,7 @@
           "layer": "",
           "name": "Boundary",
           "persistentUuid": "51d16cf8-3713-4cd6-97a7-3eda15d18628",
-          "width": 1280,
+          "width": 1264,
           "x": 16,
           "y": 576,
           "zOrder": 17,
@@ -3662,10 +3678,10 @@
           "layer": "",
           "name": "DimOverlay",
           "persistentUuid": "136ef091-2bc0-4304-8f43-36079d316aa7",
-          "width": 1280,
-          "x": 0,
-          "y": 784,
-          "zOrder": 39,
+          "width": 1296,
+          "x": 16,
+          "y": -896,
+          "zOrder": 50,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -3817,7 +3833,7 @@
           "width": 0,
           "x": 176,
           "y": 392,
-          "zOrder": 48,
+          "zOrder": 49,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -3851,22 +3867,6 @@
           "x": -16,
           "y": 0,
           "zOrder": 50,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "PatrolSide1",
-          "persistentUuid": "77181b28-b834-4c59-88b5-a4b8501c530b",
-          "width": 0,
-          "x": 528,
-          "y": 304,
-          "zOrder": 51,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -3933,6 +3933,22 @@
           "x": 32,
           "y": 416,
           "zOrder": 38,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "HealthBar_RED",
+          "persistentUuid": "a358b792-0dbb-4bc5-9554-fffa6770f3ec",
+          "width": 0,
+          "x": 796,
+          "y": 368,
+          "zOrder": 53,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -5455,7 +5471,7 @@
               "extraBorder": 0,
               "gridOffsetX": 0,
               "gridOffsetY": 0,
-              "maxSpeed": 100,
+              "maxSpeed": 75,
               "name": "Pathfinding",
               "rotateObject": false,
               "smoothingMaxCellGap": 1,
@@ -6170,6 +6186,74 @@
               ]
             }
           ]
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "NewText",
+          "persistentUuid": "bdf3c73a-f470-4353-b141-d65147677e57",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "Text",
+          "font": "",
+          "textAlignment": "left",
+          "characterSize": 20,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "Text",
+            "font": "",
+            "textAlignment": "left",
+            "verticalTextAlignment": "top",
+            "characterSize": 20,
+            "lineHeight": 0,
+            "color": "0;0;0"
+          }
+        },
+        {
+          "assetStoreId": "",
+          "height": 6,
+          "name": "HealthBar_RED",
+          "persistentUuid": "b9b67711-7d4e-4d4c-adc0-225b54a8a082",
+          "texture": "NewTiledSprite",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 36,
+          "variables": [],
+          "effects": [],
+          "behaviors": []
+        },
+        {
+          "assetStoreId": "",
+          "height": 8,
+          "name": "HealthBar_BG",
+          "persistentUuid": "9f080e00-1867-435e-8819-451212c5544d",
+          "texture": "NewTiledSprite2",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 40,
+          "variables": [],
+          "effects": [],
+          "behaviors": []
         }
       ],
       "objectsFolderStructure": {
@@ -6246,6 +6330,15 @@
           },
           {
             "objectName": "DimOverlay"
+          },
+          {
+            "objectName": "NewText"
+          },
+          {
+            "objectName": "HealthBar_RED"
+          },
+          {
+            "objectName": "HealthBar_BG"
           }
         ]
       },
@@ -6502,6 +6595,65 @@
                 "Boundary.Y()",
                 "",
                 ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "SceneJustBegins"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Create"
+              },
+              "parameters": [
+                "",
+                "HealthBar_BG",
+                "Enemy.X()",
+                "Enemy.Y()",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Create"
+              },
+              "parameters": [
+                "",
+                "HealthBar_RED",
+                "Enemy.X()",
+                "Enemy.Y()",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "LinkedObjects::LinkObjects"
+              },
+              "parameters": [
+                "",
+                "Enemy",
+                "HealthBar_BG"
+              ]
+            },
+            {
+              "type": {
+                "value": "LinkedObjects::LinkObjects"
+              },
+              "parameters": [
+                "",
+                "Enemy",
+                "HealthBar_RED"
               ]
             }
           ]
@@ -7023,8 +7175,109 @@
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "Bullet",
+                "Platform_Stone",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "Bullet",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "JAVA_SCRIPT Code\n1 block - For weapon positioning \n2 block - WASD controls"
+        },
+        {
+          "type": "BuiltinCommonInstructions::JsCode",
+          "inlineCode": [
+            "runtimeScene.setBackgroundColor(100, 100, 240);",
+            "",
+            "// Retrieve the Weapon object from the scene",
+            "const weaponObjects = runtimeScene.getObjects(\"Weapon\");",
+            "if (weaponObjects.length === 0) return;",
+            "",
+            "const weapon = weaponObjects[0];",
+            "",
+            "// Get mouse position in scene coordinates using GDevelop's native input engine",
+            "const mouseX = gdjs.evtTools.input.getMouseX(runtimeScene, \"\", 0);",
+            "const mouseY = gdjs.evtTools.input.getMouseY(runtimeScene, \"\", 0);",
+            "",
+            "// Calculate aiming angle in degrees using trigonometry",
+            "const deltaX = mouseX - weapon.getX();",
+            "const deltaY = mouseY - weapon.getY();",
+            "const angleInDegrees = Math.atan2(deltaY, deltaX) * (180 / Math.PI);",
+            "",
+            "// Apply rotation",
+            "weapon.setAngle(angleInDegrees);",
+            "",
+            "// Flip vertically if aiming past straight up/down (facing left)",
+            "if (angleInDegrees > 90 || angleInDegrees < -90) {",
+            "    weapon.flipY(true);",
+            "} else {",
+            "    weapon.flipY(false);",
+            "}",
+            ""
+          ],
+          "parameterObjects": "",
+          "useStrict": true,
+          "eventsSheetExpanded": false
+        },
+        {
+          "type": "BuiltinCommonInstructions::JsCode",
+          "inlineCode": [
+            "runtimeScene.setBackgroundColor(100,100,240);",
+            "// Platformer controls via JavaScript",
+            "const playerObjects = runtimeScene.getObjects(\"Player\");",
+            "if (playerObjects.length > 0) {",
+            "    const player = playerObjects[0];",
+            "    const inputManager = runtimeScene.getGame().getInputManager();",
+            "",
+            "    // Key Codes: 65 = A, 68 = D, 87 = W, 83 = S, 32 = Space",
+            "    if (inputManager.isKeyPressed(65)) {",
+            "        player.getBehavior(\"PlatformerObject\").simulateLeftKey();",
+            "    }",
+            "    if (inputManager.isKeyPressed(68)) {",
+            "        player.getBehavior(\"PlatformerObject\").simulateRightKey();",
+            "    }",
+            "    if (inputManager.isKeyPressed(87) || inputManager.isKeyPressed(32)) {",
+            "        player.getBehavior(\"PlatformerObject\").simulateJumpKey();",
+            "    }",
+            "}"
+          ],
+          "parameterObjects": "",
+          "useStrict": true,
+          "eventsSheetExpanded": true
         }
       ],
       "layers": [
