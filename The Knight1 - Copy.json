@@ -3081,7 +3081,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 0.7130377630690424,
+        "zoomFactor": 1.295291655123598,
         "windowMask": false,
         "selectedLayer": "",
         "gameEditorMode": "instances-editor"
@@ -3108,7 +3108,7 @@
           "width": 32,
           "x": 16,
           "y": 400,
-          "zOrder": 49,
+          "zOrder": 30,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -3501,22 +3501,6 @@
         },
         {
           "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Enemy",
-          "persistentUuid": "c026317e-0405-4033-8ca1-d8f04f96653b",
-          "width": 0,
-          "x": 808,
-          "y": 360,
-          "zOrder": 49,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
           "customSize": true,
           "depth": 1,
           "height": 16,
@@ -3662,7 +3646,7 @@
           "persistentUuid": "3b3b4fe9-d512-42f3-a70b-3060f24d6754",
           "width": 1280,
           "x": 0,
-          "y": 508,
+          "y": 496,
           "zOrder": -10,
           "numberProperties": [],
           "stringProperties": [],
@@ -3873,38 +3857,6 @@
         },
         {
           "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "PatrolSide1",
-          "persistentUuid": "9e1210b8-8141-485c-a698-c6d41eda3e0c",
-          "width": 0,
-          "x": 320,
-          "y": 400,
-          "zOrder": 35,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "PatrolSide2",
-          "persistentUuid": "acc0dc59-e16b-4e07-a547-4ded61f887ca",
-          "width": 0,
-          "x": 480,
-          "y": 400,
-          "zOrder": 35,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
           "customSize": true,
           "depth": 1,
           "height": 1,
@@ -3943,12 +3895,28 @@
           "height": 0,
           "keepRatio": true,
           "layer": "",
-          "name": "HealthBar_RED",
-          "persistentUuid": "a358b792-0dbb-4bc5-9554-fffa6770f3ec",
+          "name": "Enemy",
+          "persistentUuid": "87772b7b-aa81-4d83-a772-8c9a967e7649",
           "width": 0,
-          "x": 796,
-          "y": 368,
+          "x": 816,
+          "y": 360,
           "zOrder": 53,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Platform_Bridge",
+          "persistentUuid": "50ef646c-18e6-4f58-9f0f-5f704b6d41be",
+          "width": 0,
+          "x": 368,
+          "y": 400,
+          "zOrder": 54,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -6233,27 +6201,28 @@
         },
         {
           "assetStoreId": "",
-          "height": 6,
-          "name": "HealthBar_RED",
-          "persistentUuid": "b9b67711-7d4e-4d4c-adc0-225b54a8a082",
-          "texture": "NewTiledSprite",
-          "type": "TiledSpriteObject::TiledSprite",
-          "width": 36,
+          "name": "__HPPainter",
+          "persistentUuid": "45ffb869-8b73-4e17-a772-51b913584e8c",
+          "type": "PrimitiveDrawing::Drawer",
           "variables": [],
           "effects": [],
-          "behaviors": []
-        },
-        {
-          "assetStoreId": "",
-          "height": 8,
-          "name": "HealthBar_BG",
-          "persistentUuid": "9f080e00-1867-435e-8819-451212c5544d",
-          "texture": "NewTiledSprite2",
-          "type": "TiledSpriteObject::TiledSprite",
-          "width": 40,
-          "variables": [],
-          "effects": [],
-          "behaviors": []
+          "behaviors": [],
+          "fillOpacity": 255,
+          "outlineSize": 1,
+          "outlineOpacity": 255,
+          "absoluteCoordinates": true,
+          "clearBetweenFrames": true,
+          "antialiasing": "none",
+          "fillColor": {
+            "r": 255,
+            "g": 255,
+            "b": 255
+          },
+          "outlineColor": {
+            "r": 0,
+            "g": 0,
+            "b": 0
+          }
         }
       ],
       "objectsFolderStructure": {
@@ -6299,6 +6268,9 @@
             "objectName": "Platform_Bridge"
           },
           {
+            "objectName": "__HPPainter"
+          },
+          {
             "objectName": "Platform_Moving"
           },
           {
@@ -6333,12 +6305,6 @@
           },
           {
             "objectName": "NewText"
-          },
-          {
-            "objectName": "HealthBar_RED"
-          },
-          {
-            "objectName": "HealthBar_BG"
           }
         ]
       },
@@ -6595,65 +6561,6 @@
                 "Boundary.Y()",
                 "",
                 ""
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "SceneJustBegins"
-              },
-              "parameters": [
-                ""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "Create"
-              },
-              "parameters": [
-                "",
-                "HealthBar_BG",
-                "Enemy.X()",
-                "Enemy.Y()",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "Create"
-              },
-              "parameters": [
-                "",
-                "HealthBar_RED",
-                "Enemy.X()",
-                "Enemy.Y()",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "LinkedObjects::LinkObjects"
-              },
-              "parameters": [
-                "",
-                "Enemy",
-                "HealthBar_BG"
-              ]
-            },
-            {
-              "type": {
-                "value": "LinkedObjects::LinkObjects"
-              },
-              "parameters": [
-                "",
-                "Enemy",
-                "HealthBar_RED"
               ]
             }
           ]
@@ -6970,7 +6877,7 @@
               "parameters": [
                 "Enemy",
                 "Player",
-                "250",
+                "50",
                 ""
               ]
             }
@@ -7083,72 +6990,6 @@
           "conditions": [
             {
               "type": {
-                "value": "CollisionNP"
-              },
-              "parameters": [
-                "Bullet",
-                "Enemy",
-                "",
-                "",
-                ""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "SetNumberObjectVariable"
-              },
-              "parameters": [
-                "Enemy",
-                "HP",
-                "-",
-                "25"
-              ]
-            },
-            {
-              "type": {
-                "value": "Delete"
-              },
-              "parameters": [
-                "Bullet",
-                ""
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "NumberObjectVariable"
-              },
-              "parameters": [
-                "Enemy",
-                "HP",
-                "<",
-                "0"
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "Delete"
-              },
-              "parameters": [
-                "Enemy",
-                ""
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
                 "value": "KeyFromTextPressed"
               },
               "parameters": [
@@ -7200,11 +7041,6 @@
               ]
             }
           ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": []
         },
         {
           "type": "BuiltinCommonInstructions::Comment",
@@ -7278,6 +7114,216 @@
           "parameterObjects": "",
           "useStrict": true,
           "eventsSheetExpanded": true
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "Bullet",
+                "Platform_Dirt",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "Bullet",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "Bullet",
+                "Platform_Dirt2",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "Bullet",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "Bullet",
+                "Platform_Bridge",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "Bullet",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "Bullet",
+                "Platform_Stone2",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "actions": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::JsCode",
+          "inlineCode": [
+            "const enemies = runtimeScene.getObjects(\"Enemy\");",
+            "const bullets = runtimeScene.getObjects(\"Bullet\");",
+            "",
+            "// 1. Initialize Camera Shake variables on scene runtime",
+            "if (runtimeScene._shakeIntensity === undefined) {",
+            "    runtimeScene._shakeIntensity = 0;",
+            "}",
+            "",
+            "// 2. Handle Camera Shake Decay & Position Offset",
+            "if (runtimeScene._shakeIntensity > 0) {",
+            "    const layer = runtimeScene.getLayer(\"\"); // Default base layer",
+            "    const originalX = layer.getCameraX();",
+            "    const originalY = layer.getCameraY();",
+            "",
+            "    // Generate random offset based on current intensity",
+            "    const offsetX = (Math.random() - 0.5) * runtimeScene._shakeIntensity;",
+            "    const offsetY = (Math.random() - 0.5) * runtimeScene._shakeIntensity;",
+            "",
+            "    layer.setCameraX(originalX + offsetX);",
+            "    layer.setCameraY(originalY + offsetY);",
+            "",
+            "    // Decay the shake intensity down to 0",
+            "    runtimeScene._shakeIntensity -= 0.8;",
+            "    if (runtimeScene._shakeIntensity < 0) runtimeScene._shakeIntensity = 0;",
+            "}",
+            "",
+            "// 3. Shape Painter setup",
+            "let painters = runtimeScene.getObjects(\"__HPPainter\");",
+            "let painter = painters.length > 0 ? painters[0] : runtimeScene.createObject(\"__HPPainter\");",
+            "",
+            "if (painter) {",
+            "    painter.setZOrder(9999);",
+            "    painter.clear();",
+            "",
+            "    const MAX_HP = 100;",
+            "    const DAMAGE = 25;",
+            "    const BAR_W = 32;",
+            "    const BAR_H = 4;",
+            "",
+            "    enemies.forEach(enemy => {",
+            "        if (enemy.hp === undefined) {",
+            "            enemy.hp = MAX_HP;",
+            "        }",
+            "",
+            "        // Draw Health Bar UI",
+            "        const eX = enemy.getX();",
+            "        const eY = enemy.getY();",
+            "        const eW = enemy.getWidth();",
+            "",
+            "        const centerX = eX + (eW / 2);",
+            "        const topY = eY - 8;",
+            "        const drawX = centerX - (BAR_W / 2);",
+            "",
+            "        const hpPercent = Math.max(0, enemy.hp / MAX_HP);",
+            "        const redWidth = BAR_W * hpPercent;",
+            "",
+            "        painter.setFillColor(\"30;30;30\");",
+            "        painter.setOutlineColor(\"0;0;0\");",
+            "        painter.setOutlineSize(1);",
+            "        painter.drawRectangle(drawX - 1, topY - 1, drawX + BAR_W + 1, topY + BAR_H + 1);",
+            "",
+            "        if (redWidth > 0) {",
+            "            painter.setFillColor(\"235;45;45\");",
+            "            painter.setOutlineSize(0);",
+            "            painter.drawRectangle(drawX, topY, drawX + redWidth, topY + BAR_H);",
+            "        }",
+            "",
+            "        // Bullet Hit Detection & Shake Trigger",
+            "        const enemyAABB = enemy.getAABB();",
+            "        bullets.forEach(bullet => {",
+            "            const bulletAABB = bullet.getAABB();",
+            "",
+            "            const hit = (",
+            "                enemyAABB.min[0] < bulletAABB.max[0] &&",
+            "                enemyAABB.max[0] > bulletAABB.min[0] &&",
+            "                enemyAABB.min[1] < bulletAABB.max[1] &&",
+            "                enemyAABB.max[1] > bulletAABB.min[1]",
+            "            );",
+            "",
+            "            if (hit) {",
+            "                enemy.hp -= DAMAGE;",
+            "                bullet.deleteFromScene();",
+            "",
+            "                // Set camera shake intensity (higher number = bigger shake)",
+            "                runtimeScene._shakeIntensity = 6;",
+            "            }",
+            "        });",
+            "",
+            "        // Enemy Death & Larger Death Shake",
+            "        if (enemy.hp <= 0) {",
+            "            runtimeScene._shakeIntensity = 12; // Bigger shake on death",
+            "            enemy.deleteFromScene();",
+            "        }",
+            "    });",
+            "}"
+          ],
+          "parameterObjects": "",
+          "useStrict": true,
+          "eventsSheetExpanded": false
         }
       ],
       "layers": [
