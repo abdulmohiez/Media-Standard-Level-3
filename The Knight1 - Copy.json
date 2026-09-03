@@ -1188,6 +1188,22 @@
         "name": "NewTiledSprite2",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "file": "assets/NewSprite4.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite4",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/NewSprite5.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite5",
+        "smoothed": false,
+        "userAdded": false
       }
     ]
   },
@@ -1198,12 +1214,14 @@
   "objectsGroups": [],
   "variables": [
     {
-      "name": "Audio_Enabled",
+      "name": "Sound_Volume",
+      "persistentUuid": "e8bf7c7e-4bcc-40b2-acce-075b4bb92794",
       "type": "number",
-      "value": 1
+      "value": 100
     },
     {
       "name": "Dim_Enabled",
+      "persistentUuid": "4e9da0d8-74e4-4c78-b13a-270245ef3000",
       "type": "number",
       "value": 0
     }
@@ -1491,6 +1509,23 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 720,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Transition_overlay",
+          "persistentUuid": "03f53885-f4ac-4a81-8b06-654f86e0c128",
+          "width": 1280,
+          "x": 0,
+          "y": 0,
+          "zOrder": 99,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [
@@ -1734,6 +1769,73 @@
               ]
             }
           ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "Transition_overlay",
+          "persistentUuid": "b4c08865-f879-4bd4-bd5b-48fd87ffa3e3",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "Tween",
+              "type": "Tween::TweenBehavior"
+            }
+          ],
+          "animations": [
+            {
+              "name": "NewSprite",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "metadata": "{\"pskl\":{}}",
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "NewSprite4",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 64,
+                            "y": 0
+                          },
+                          {
+                            "x": 64,
+                            "y": 64
+                          },
+                          {
+                            "x": 0,
+                            "y": 64
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "objectsFolderStructure": {
@@ -1780,6 +1882,9 @@
           },
           {
             "objectName": "DimOverlay"
+          },
+          {
+            "objectName": "Transition_overlay"
           }
         ]
       },
@@ -1808,159 +1913,16 @@
                 "40",
                 "1"
               ]
-            }
-          ],
-          "events": [
-            {
-              "type": "BuiltinCommonInstructions::JsCode",
-              "inlineCode": [
-                "runtimeScene.setBackgroundColor(100,100,240);",
-                "// ============================================================================",
-                "// UI BUTTON ANIMATION & SFX CONTROLLER (Preserves Scene BGM)",
-                "// ============================================================================",
-                "",
-                "// 1. CONFIGURATION",
-                "const BUTTON_OBJECT_NAMES = [\"PlayButton\", \"SettingsButton\", \"BackButton\", \"Button\"]; // List all button object names",
-                "const CLICK_SOUND_FILE = \"click.wav\"; // Name of your sound file in GDevelop Resources",
-                "const SFX_VOLUME = 0.8;               // SFX Volume (0.0 to 1.0)",
-                "const SCALE_HOVER = 1.08;             // Size multiplier on hover",
-                "const SCALE_PRESS = 0.92;             // Size multiplier on press",
-                "",
-                "// 2. PLAY SFX ON A SEPARATE CHANNEL (Doesn't interrupt BGM)",
-                "function playClickSFX() {",
-                "    const soundManager = runtimeScene.getGame().getSoundManager();",
-                "    if (soundManager) {",
-                "        // Channel 1 reserved for SFX so background music on channel 0 isn't disturbed",
-                "        soundManager.playSoundOnChannel(CLICK_SOUND_FILE, 1, false, SFX_VOLUME, 1.0);",
-                "    }",
-                "}",
-                "",
-                "// 3. ATTACH INTERACTIVE ANIMATIONS & EVENTS",
-                "BUTTON_OBJECT_NAMES.forEach(objectName => {",
-                "    const buttonInstances = runtimeScene.getObjects(objectName);",
-                "",
-                "    buttonInstances.forEach(btn => {",
-                "        if (btn._uiListenersAttached) return;",
-                "        btn._uiListenersAttached = true;",
-                "",
-                "        btn._originalScaleX = btn.getScaleX();",
-                "        btn._originalScaleY = btn.getScaleY();",
-                "",
-                "        const renderer = btn.getRendererObject();",
-                "        if (!renderer) return;",
-                "",
-                "        renderer.interactive = true;",
-                "        renderer.buttonMode = true;",
-                "",
-                "        // Hover In -> Enlarge",
-                "        renderer.on(\"pointerover\", () => {",
-                "            btn.setScaleX(btn._originalScaleX * SCALE_HOVER);",
-                "            btn.setScaleY(btn._originalScaleY * SCALE_HOVER);",
-                "        });",
-                "",
-                "        // Hover Out -> Reset",
-                "        renderer.on(\"pointerout\", () => {",
-                "            btn.setScaleX(btn._originalScaleX);",
-                "            btn.setScaleY(btn._originalScaleY);",
-                "        });",
-                "",
-                "        // Press Down -> Shrink",
-                "        renderer.on(\"pointerdown\", () => {",
-                "            btn.setScaleX(btn._originalScaleX * SCALE_PRESS);",
-                "            btn.setScaleY(btn._originalScaleY * SCALE_PRESS);",
-                "        });",
-                "",
-                "        // Click Release -> Play SFX & Trigger Action",
-                "        renderer.on(\"pointerup\", () => {",
-                "            btn.setScaleX(btn._originalScaleX * SCALE_HOVER);",
-                "            btn.setScaleY(btn._originalScaleY * SCALE_HOVER);",
-                "            playClickSFX();",
-                "        });",
-                "",
-                "        // Release Outside -> Reset",
-                "        renderer.on(\"pointerupoutside\", () => {",
-                "            btn.setScaleX(btn._originalScaleX);",
-                "            btn.setScaleY(btn._originalScaleY);",
-                "        });",
-                "    });",
-                "});"
-              ],
-              "parameterObjects": "",
-              "useStrict": true,
-              "eventsSheetExpanded": false
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "IsCursorOnObject"
-              },
-              "parameters": [
-                "Button_Play",
-                "",
-                "",
-                ""
-              ]
             },
             {
               "type": {
-                "value": "MouseButtonFromTextPressed"
+                "value": "OpacityCapability::OpacityBehavior::SetValue"
               },
               "parameters": [
-                "",
-                "\"Left\""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "Scene"
-              },
-              "parameters": [
-                "",
-                "\"Level 1\"",
-                ""
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "IsCursorOnObject"
-              },
-              "parameters": [
-                "Settings",
-                "",
-                "",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "MouseButtonFromTextPressed"
-              },
-              "parameters": [
-                "",
-                "\"Left\""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "Scene"
-              },
-              "parameters": [
-                "",
-                "\"Settings\"",
-                ""
+                "Transition_overlay",
+                "Opacity",
+                "=",
+                "0"
               ]
             }
           ]
@@ -2031,6 +1993,134 @@
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::JsCode",
+          "inlineCode": [
+            "const playButtons = runtimeScene.getObjects(\"Button_Play\");",
+            "const settingsButtons = runtimeScene.getObjects(\"Settings\");",
+            "const overlays = runtimeScene.getObjects(\"Transition_overlay\");",
+            "",
+            "if (overlays.length > 0) {",
+            "    const overlay = overlays[0];",
+            "    const tweenBehavior = overlay.getBehavior(\"Tween\");",
+            "    const inputManager = runtimeScene.getGame().getInputManager();",
+            "    const cursorX = inputManager.getCursorX(runtimeScene);",
+            "    const cursorY = inputManager.getCursorY(runtimeScene);",
+            "",
+            "    // 1. Reset variable on first frame so fade-in triggers on return",
+            "    if (runtimeScene.getTimeManager().getTimeFromStart() < 50) {",
+            "        runtimeScene.getVariables().get(\"FadeInDone\").setBoolean(false);",
+            "    }",
+            "",
+            "    // 2. Fade IN when scene opens",
+            "    if (!runtimeScene.getVariables().get(\"FadeInDone\").getAsBoolean()) {",
+            "        overlay.setOpacity(255);",
+            "        tweenBehavior.addObjectOpacityTween(\"FadeIn\", 0, \"linear\", 500, false);",
+            "        runtimeScene.getVariables().get(\"FadeInDone\").setBoolean(true);",
+            "    }",
+            "",
+            "    // 3. Handle Play Button Click",
+            "    if (playButtons.length > 0 && playButtons[0].insideObject(cursorX, cursorY) && inputManager.isMouseButtonPressed(0)) {",
+            "        if (!tweenBehavior.isPlaying(\"FadeToLevel1\") && !tweenBehavior.hasFinished(\"FadeToLevel1\")) {",
+            "            tweenBehavior.addObjectOpacityTween(\"FadeToLevel1\", 255, \"linear\", 500, false);",
+            "        }",
+            "    }",
+            "",
+            "    // 4. Handle Settings Button Click",
+            "    if (settingsButtons.length > 0 && settingsButtons[0].insideObject(cursorX, cursorY) && inputManager.isMouseButtonPressed(0)) {",
+            "        if (!tweenBehavior.isPlaying(\"FadeToSettings\") && !tweenBehavior.hasFinished(\"FadeToSettings\")) {",
+            "            tweenBehavior.addObjectOpacityTween(\"FadeToSettings\", 255, \"linear\", 500, false);",
+            "        }",
+            "    }",
+            "",
+            "    // 5. Perform Scene Transitions after fade completes",
+            "    if (tweenBehavior.hasFinished(\"FadeToLevel1\")) {",
+            "        runtimeScene.getGame().getSceneStack().replace(\"Level 1\");",
+            "    }",
+            "    if (tweenBehavior.hasFinished(\"FadeToSettings\")) {",
+            "        runtimeScene.getGame().getSceneStack().replace(\"Settings\");",
+            "    }",
+            "}"
+          ],
+          "parameterObjects": "",
+          "useStrict": true,
+          "eventsSheetExpanded": false
+        },
+        {
+          "type": "BuiltinCommonInstructions::JsCode",
+          "inlineCode": [
+            "// Get Scene Objects",
+            "const playButtons = runtimeScene.getObjects(\"Button_Play\");",
+            "const settingsButtons = runtimeScene.getObjects(\"Settings\");",
+            "const overlays = runtimeScene.getObjects(\"Transition_overlay\");",
+            "const dimOverlays = runtimeScene.getObjects(\"DimOverlay\");",
+            "",
+            "if (overlays.length > 0) {",
+            "    const overlay = overlays[0];",
+            "    const tweenBehavior = overlay.getBehavior(\"Tween\");",
+            "    const inputManager = runtimeScene.getGame().getInputManager();",
+            "    const cursorX = inputManager.getCursorX(runtimeScene);",
+            "    const cursorY = inputManager.getCursorY(runtimeScene);",
+            "    const globalVars = runtimeScene.getGame().getVariables();",
+            "",
+            "    // 1. Reset fade status on scene start",
+            "    if (runtimeScene.getTimeManager().getTimeFromStart() < 50) {",
+            "        runtimeScene.getVariables().get(\"FadeInDone\").setBoolean(false);",
+            "    }",
+            "",
+            "    // 2. Fade IN from black when scene opens",
+            "    if (!runtimeScene.getVariables().get(\"FadeInDone\").getAsBoolean()) {",
+            "        overlay.setOpacity(255);",
+            "        tweenBehavior.addObjectOpacityTween(\"FadeIn\", 0, \"linear\", 500, false);",
+            "        runtimeScene.getVariables().get(\"FadeInDone\").setBoolean(true);",
+            "    }",
+            "",
+            "    // 3. Dynamic Dim Overlay",
+            "    const isDimOn = globalVars.get(\"DimEnabled\").getAsNumber() === 1;",
+            "    if (dimOverlays.length > 0) {",
+            "        if (isDimOn) {",
+            "            dimOverlays[0].show();",
+            "            dimOverlays[0].setOpacity(120);",
+            "        } else {",
+            "            dimOverlays[0].hide();",
+            "        }",
+            "    }",
+            "",
+            "    // 4. Dynamic Volume Setting (Default to 100 if unassigned)",
+            "    let currentVol = globalVars.get(\"SoundVolume\").getAsNumber();",
+            "    if (currentVol === 0 && !globalVars.has(\"SoundVolume\")) {",
+            "        currentVol = 100;",
+            "        globalVars.get(\"SoundVolume\").setNumber(100);",
+            "    }",
+            "    runtimeScene.getGame().getSoundManager().setGlobalVolume(currentVol);",
+            "",
+            "    // 5. Click Play Button (Fade Out to Level 1)",
+            "    if (playButtons.length > 0 && playButtons[0].insideObject(cursorX, cursorY) && inputManager.isMouseButtonPressed(0)) {",
+            "        if (!tweenBehavior.isPlaying(\"FadeToLevel1\") && !tweenBehavior.hasFinished(\"FadeToLevel1\")) {",
+            "            tweenBehavior.addObjectOpacityTween(\"FadeToLevel1\", 255, \"linear\", 500, false);",
+            "        }",
+            "    }",
+            "",
+            "    // 6. Click Settings Button (Fade Out to Settings)",
+            "    if (settingsButtons.length > 0 && settingsButtons[0].insideObject(cursorX, cursorY) && inputManager.isMouseButtonPressed(0)) {",
+            "        if (!tweenBehavior.isPlaying(\"FadeToSettings\") && !tweenBehavior.hasFinished(\"FadeToSettings\")) {",
+            "            tweenBehavior.addObjectOpacityTween(\"FadeToSettings\", 255, \"linear\", 500, false);",
+            "        }",
+            "    }",
+            "",
+            "    // 7. Perform Scene Switches when transition completes",
+            "    if (tweenBehavior.hasFinished(\"FadeToLevel1\")) {",
+            "        runtimeScene.getGame().getSceneStack().replace(\"Level 1\");",
+            "    }",
+            "    if (tweenBehavior.hasFinished(\"FadeToSettings\")) {",
+            "        runtimeScene.getGame().getSceneStack().replace(\"Settings\");",
+            "    }",
+            "}"
+          ],
+          "parameterObjects": "",
+          "useStrict": true,
+          "eventsSheetExpanded": false
         }
       ],
       "layers": [
@@ -2128,6 +2218,10 @@
         {
           "name": "Text",
           "type": "TextContainerCapability::TextContainerBehavior"
+        },
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
         }
       ]
     },
@@ -2404,6 +2498,23 @@
           "x": -64,
           "y": 928,
           "zOrder": 17,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 720,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Transition_overlay",
+          "persistentUuid": "a958b947-69e2-4dd2-bfb0-e8b4da133ffd",
+          "width": 1280,
+          "x": 0,
+          "y": 0,
+          "zOrder": 18,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -2686,6 +2797,73 @@
             "align": "left",
             "verticalTextAlignment": "top"
           }
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "Transition_overlay",
+          "persistentUuid": "ae5a0cb4-d872-4633-a8d8-8f7b510a2482",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "Tween",
+              "type": "Tween::TweenBehavior"
+            }
+          ],
+          "animations": [
+            {
+              "name": "NewSprite",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "metadata": "{\"pskl\":{}}",
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "NewSprite5",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 64,
+                            "y": 0
+                          },
+                          {
+                            "x": 64,
+                            "y": 64
+                          },
+                          {
+                            "x": 0,
+                            "y": 64
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "objectsFolderStructure": {
@@ -2729,6 +2907,9 @@
           },
           {
             "objectName": "Dimoverlay"
+          },
+          {
+            "objectName": "Transition_overlay"
           }
         ]
       },
@@ -2758,87 +2939,176 @@
                 "1"
               ]
             }
-          ],
-          "events": [
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
             {
-              "type": "BuiltinCommonInstructions::JsCode",
-              "inlineCode": [
-                "runtimeScene.setBackgroundColor(100,100,240);",
-                "// ============================================================================",
-                "// UI BUTTON ANIMATION & SFX CONTROLLER (Preserves Scene BGM)",
-                "// ============================================================================",
-                "",
-                "// 1. CONFIGURATION",
-                "const BUTTON_OBJECT_NAMES = [\"PlayButton\", \"SettingsButton\", \"BackButton\", \"Button\"]; // List all button object names",
-                "const CLICK_SOUND_FILE = \"click.wav\"; // Name of your sound file in GDevelop Resources",
-                "const SFX_VOLUME = 0.8;               // SFX Volume (0.0 to 1.0)",
-                "const SCALE_HOVER = 1.08;             // Size multiplier on hover",
-                "const SCALE_PRESS = 0.92;             // Size multiplier on press",
-                "",
-                "// 2. PLAY SFX ON A SEPARATE CHANNEL (Doesn't interrupt BGM)",
-                "function playClickSFX() {",
-                "    const soundManager = runtimeScene.getGame().getSoundManager();",
-                "    if (soundManager) {",
-                "        // Channel 1 reserved for SFX so background music on channel 0 isn't disturbed",
-                "        soundManager.playSoundOnChannel(CLICK_SOUND_FILE, 1, false, SFX_VOLUME, 1.0);",
-                "    }",
-                "}",
-                "",
-                "// 3. ATTACH INTERACTIVE ANIMATIONS & EVENTS",
-                "BUTTON_OBJECT_NAMES.forEach(objectName => {",
-                "    const buttonInstances = runtimeScene.getObjects(objectName);",
-                "",
-                "    buttonInstances.forEach(btn => {",
-                "        if (btn._uiListenersAttached) return;",
-                "        btn._uiListenersAttached = true;",
-                "",
-                "        btn._originalScaleX = btn.getScaleX();",
-                "        btn._originalScaleY = btn.getScaleY();",
-                "",
-                "        const renderer = btn.getRendererObject();",
-                "        if (!renderer) return;",
-                "",
-                "        renderer.interactive = true;",
-                "        renderer.buttonMode = true;",
-                "",
-                "        // Hover In -> Enlarge",
-                "        renderer.on(\"pointerover\", () => {",
-                "            btn.setScaleX(btn._originalScaleX * SCALE_HOVER);",
-                "            btn.setScaleY(btn._originalScaleY * SCALE_HOVER);",
-                "        });",
-                "",
-                "        // Hover Out -> Reset",
-                "        renderer.on(\"pointerout\", () => {",
-                "            btn.setScaleX(btn._originalScaleX);",
-                "            btn.setScaleY(btn._originalScaleY);",
-                "        });",
-                "",
-                "        // Press Down -> Shrink",
-                "        renderer.on(\"pointerdown\", () => {",
-                "            btn.setScaleX(btn._originalScaleX * SCALE_PRESS);",
-                "            btn.setScaleY(btn._originalScaleY * SCALE_PRESS);",
-                "        });",
-                "",
-                "        // Click Release -> Play SFX & Trigger Action",
-                "        renderer.on(\"pointerup\", () => {",
-                "            btn.setScaleX(btn._originalScaleX * SCALE_HOVER);",
-                "            btn.setScaleY(btn._originalScaleY * SCALE_HOVER);",
-                "            playClickSFX();",
-                "        });",
-                "",
-                "        // Release Outside -> Reset",
-                "        renderer.on(\"pointerupoutside\", () => {",
-                "            btn.setScaleX(btn._originalScaleX);",
-                "            btn.setScaleY(btn._originalScaleY);",
-                "        });",
-                "    });",
-                "});"
-              ],
-              "parameterObjects": "",
-              "useStrict": true,
-              "eventsSheetExpanded": false
+              "type": {
+                "value": "SceneJustBegins"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "OpacityCapability::OpacityBehavior::SetValue"
+              },
+              "parameters": [
+                "Transition_overlay",
+                "Opacity",
+                "=",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+              },
+              "parameters": [
+                "Transition_overlay",
+                "Tween",
+                "\"FadeIn\"",
+                "0",
+                "\"linear\"",
+                "0.5",
+                ""
+              ]
             }
           ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::JsCode",
+          "inlineCode": [
+            "const backButtons = runtimeScene.getObjects(\"BackButton\");",
+            "const overlays = runtimeScene.getObjects(\"Transition_overlay\");",
+            "",
+            "if (overlays.length > 0) {",
+            "    const overlay = overlays[0];",
+            "    const tweenBehavior = overlay.getBehavior(\"Tween\");",
+            "    const inputManager = runtimeScene.getGame().getInputManager();",
+            "",
+            "    // 1. Reset variable on scene start",
+            "    if (runtimeScene.getTimeManager().getTimeFromStart() < 50) {",
+            "        runtimeScene.getVariables().get(\"FadeInDone\").setBoolean(false);",
+            "    }",
+            "",
+            "    // 2. Fade IN when entering Settings",
+            "    if (!runtimeScene.getVariables().get(\"FadeInDone\").getAsBoolean()) {",
+            "        overlay.setOpacity(255);",
+            "        tweenBehavior.addObjectOpacityTween(\"FadeIn\", 0, \"linear\", 500, false);",
+            "        runtimeScene.getVariables().get(\"FadeInDone\").setBoolean(true);",
+            "    }",
+            "",
+            "    // 3. Fade OUT when clicking Back Button",
+            "    if (backButtons.length > 0) {",
+            "        const backButton = backButtons[0];",
+            "        const cursorX = inputManager.getCursorX(runtimeScene);",
+            "        const cursorY = inputManager.getCursorY(runtimeScene);",
+            "",
+            "        if (backButton.insideObject(cursorX, cursorY) && inputManager.isMouseButtonPressed(0)) {",
+            "            if (!tweenBehavior.isPlaying(\"FadeToMenu\") && !tweenBehavior.hasFinished(\"FadeToMenu\")) {",
+            "                tweenBehavior.addObjectOpacityTween(\"FadeToMenu\", 255, \"linear\", 500, false);",
+            "            }",
+            "        }",
+            "    }",
+            "",
+            "    // 4. Switch back to Game Menu",
+            "    if (tweenBehavior.hasFinished(\"FadeToMenu\")) {",
+            "        runtimeScene.getGame().getSceneStack().replace(\"Game Menu\");",
+            "    }",
+            "}"
+          ],
+          "parameterObjects": "",
+          "useStrict": true,
+          "eventsSheetExpanded": false
+        },
+        {
+          "type": "BuiltinCommonInstructions::JsCode",
+          "inlineCode": [
+            "// Get Scene Objects",
+            "const backButtons = runtimeScene.getObjects(\"BackButton\");",
+            "const dimToggles = runtimeScene.getObjects(\"DimToggle\"); ",
+            "const volDownButtons = runtimeScene.getObjects(\"VolDown\"); ",
+            "const volUpButtons = runtimeScene.getObjects(\"VolUp\");     ",
+            "const overlays = runtimeScene.getObjects(\"Transition_overlay\");",
+            "const dimOverlays = runtimeScene.getObjects(\"DimOverlay\");",
+            "",
+            "if (overlays.length > 0) {",
+            "    const overlay = overlays[0];",
+            "    const tweenBehavior = overlay.getBehavior(\"Tween\");",
+            "    const inputManager = runtimeScene.getGame().getInputManager();",
+            "    const cursorX = inputManager.getCursorX(runtimeScene);",
+            "    const cursorY = inputManager.getCursorY(runtimeScene);",
+            "    const globalVars = runtimeScene.getGame().getVariables();",
+            "",
+            "    // 1. Reset fade status on scene start",
+            "    if (runtimeScene.getTimeManager().getTimeFromStart() < 50) {",
+            "        runtimeScene.getVariables().get(\"FadeInDone\").setBoolean(false);",
+            "    }",
+            "",
+            "    // 2. Fade IN from black",
+            "    if (!runtimeScene.getVariables().get(\"FadeInDone\").getAsBoolean()) {",
+            "        overlay.setOpacity(255);",
+            "        tweenBehavior.addObjectOpacityTween(\"FadeIn\", 0, \"linear\", 500, false);",
+            "        runtimeScene.getVariables().get(\"FadeInDone\").setBoolean(true);",
+            "    }",
+            "",
+            "    // 3. Dynamic Dim Overlay Control",
+            "    let isDimOn = globalVars.get(\"DimEnabled\").getAsNumber() === 1;",
+            "    if (dimOverlays.length > 0) {",
+            "        if (isDimOn) {",
+            "            dimOverlays[0].show();",
+            "            dimOverlays[0].setOpacity(120);",
+            "        } else {",
+            "            dimOverlays[0].hide();",
+            "        }",
+            "    }",
+            "",
+            "    // Toggle Dim Status on Click",
+            "    if (dimToggles.length > 0 && dimToggles[0].insideObject(cursorX, cursorY) && inputManager.isMouseButtonReleased(0)) {",
+            "        globalVars.get(\"DimEnabled\").setNumber(isDimOn ? 0 : 1);",
+            "    }",
+            "",
+            "    // 4. Dynamic Volume Control (+ and - Buttons)",
+            "    let currentVol = globalVars.get(\"SoundVolume\").getAsNumber();",
+            "    if (currentVol === 0 && !globalVars.has(\"SoundVolume\")) {",
+            "        currentVol = 100;",
+            "        globalVars.get(\"SoundVolume\").setNumber(100);",
+            "    }",
+            "",
+            "    if (volDownButtons.length > 0 && volDownButtons[0].insideObject(cursorX, cursorY) && inputManager.isMouseButtonReleased(0)) {",
+            "        currentVol = Math.max(0, currentVol - 10);",
+            "        globalVars.get(\"SoundVolume\").setNumber(currentVol);",
+            "    }",
+            "",
+            "    if (volUpButtons.length > 0 && volUpButtons[0].insideObject(cursorX, cursorY) && inputManager.isMouseButtonReleased(0)) {",
+            "        currentVol = Math.min(100, currentVol + 10);",
+            "        globalVars.get(\"SoundVolume\").setNumber(currentVol);",
+            "    }",
+            "",
+            "    runtimeScene.getGame().getSoundManager().setGlobalVolume(currentVol);",
+            "",
+            "    // 5. Fade OUT when BackButton is clicked",
+            "    if (backButtons.length > 0 && backButtons[0].insideObject(cursorX, cursorY) && inputManager.isMouseButtonPressed(0)) {",
+            "        if (!tweenBehavior.isPlaying(\"FadeToMenu\") && !tweenBehavior.hasFinished(\"FadeToMenu\")) {",
+            "            tweenBehavior.addObjectOpacityTween(\"FadeToMenu\", 255, \"linear\", 500, false);",
+            "        }",
+            "    }",
+            "",
+            "    // 6. Return to Game Menu",
+            "    if (tweenBehavior.hasFinished(\"FadeToMenu\")) {",
+            "        runtimeScene.getGame().getSceneStack().replace(\"Game Menu\");",
+            "    }",
+            "}"
+          ],
+          "parameterObjects": "",
+          "useStrict": true,
+          "eventsSheetExpanded": false
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -3033,7 +3303,7 @@
                 "value": "SetNumberVariable"
               },
               "parameters": [
-                "Audio_Enabled",
+                "Sound_Volume",
                 "=",
                 "1"
               ]
@@ -3097,7 +3367,7 @@
                 "value": "SetNumberVariable"
               },
               "parameters": [
-                "Audio_Enabled",
+                "Sound_Volume",
                 "=",
                 "0"
               ]
@@ -3221,6 +3491,10 @@
         {
           "name": "Text",
           "type": "TextContainerCapability::TextContainerBehavior"
+        },
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
         }
       ]
     },
@@ -6883,7 +7157,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Audio_Enabled",
+                    "Sound_Volume",
                     "=",
                     "1"
                   ]
@@ -6921,7 +7195,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Audio_Enabled",
+                    "Sound_Volume",
                     "=",
                     "0"
                   ]
@@ -8129,6 +8403,113 @@
             "        const eX = enemy.getX() + (enemy.getWidth() / 2);",
             "        const eY = enemy.getY();",
             "        drawRedHealthBar(eX, eY, enemy.customHP, ENEMY_MAX_HP);",
+            "    }",
+            "}"
+          ],
+          "parameterObjects": "",
+          "useStrict": true,
+          "eventsSheetExpanded": false
+        },
+        {
+          "type": "BuiltinCommonInstructions::JsCode",
+          "inlineCode": [
+            "runtimeScene.setBackgroundColor(100,100,240);",
+            "// Get references to your objects in Level 1 scene",
+            "const exitButtons = runtimeScene.getObjects(\"ExitButton\"); // Rename to match your level exit/pause button",
+            "const overlays = runtimeScene.getObjects(\"Transition_overlay\");",
+            "",
+            "if (overlays.length > 0) {",
+            "    const overlay = overlays[0];",
+            "    const tweenBehavior = overlay.getBehavior(\"Tween\");",
+            "    const inputManager = runtimeScene.getGame().getInputManager();",
+            "",
+            "    // 1. Fade IN when opening Level 1",
+            "    if (!runtimeScene.getVariables().get(\"FadeInDone\").getAsBoolean()) {",
+            "        overlay.setOpacity(255); // Start black",
+            "        tweenBehavior.addObjectOpacityTween(\"FadeIn\", 0, \"linear\", 500, false); // Fade to transparent",
+            "        runtimeScene.getVariables().get(\"FadeInDone\").setBoolean(true);",
+            "    }",
+            "",
+            "    // 2. Fade OUT when clicking the Exit button",
+            "    if (exitButtons.length > 0) {",
+            "        const exitButton = exitButtons[0];",
+            "        const cursorX = inputManager.getCursorX(runtimeScene);",
+            "        const cursorY = inputManager.getCursorY(runtimeScene);",
+            "",
+            "        if (exitButton.insideObject(cursorX, cursorY) && inputManager.isMouseButtonPressed(0)) {",
+            "            if (!tweenBehavior.isPlaying(\"FadeOut\") && !tweenBehavior.hasFinished(\"FadeOut\")) {",
+            "                tweenBehavior.addObjectOpacityTween(\"FadeOut\", 255, \"linear\", 500, false);",
+            "            }",
+            "        }",
+            "    }",
+            "",
+            "    // 3. Switch back to Game Menu once FadeOut completes",
+            "    if (tweenBehavior.hasFinished(\"FadeOut\")) {",
+            "        runtimeScene.getGame().getSceneStack().replace(\"Game Menu\");",
+            "    }",
+            "}"
+          ],
+          "parameterObjects": "",
+          "useStrict": true,
+          "eventsSheetExpanded": false
+        },
+        {
+          "type": "BuiltinCommonInstructions::JsCode",
+          "inlineCode": [
+            "// Get Scene Objects",
+            "const exitButtons = runtimeScene.getObjects(\"ExitButton\");",
+            "const overlays = runtimeScene.getObjects(\"Transition_overlay\");",
+            "const dimOverlays = runtimeScene.getObjects(\"DimOverlay\");",
+            "",
+            "if (overlays.length > 0) {",
+            "    const overlay = overlays[0];",
+            "    const tweenBehavior = overlay.getBehavior(\"Tween\");",
+            "    const inputManager = runtimeScene.getGame().getInputManager();",
+            "    const cursorX = inputManager.getCursorX(runtimeScene);",
+            "    const cursorY = inputManager.getCursorY(runtimeScene);",
+            "    const globalVars = runtimeScene.getGame().getVariables();",
+            "",
+            "    // 1. Reset fade status on scene start",
+            "    if (runtimeScene.getTimeManager().getTimeFromStart() < 50) {",
+            "        runtimeScene.getVariables().get(\"FadeInDone\").setBoolean(false);",
+            "    }",
+            "",
+            "    // 2. Fade IN from black",
+            "    if (!runtimeScene.getVariables().get(\"FadeInDone\").getAsBoolean()) {",
+            "        overlay.setOpacity(255);",
+            "        tweenBehavior.addObjectOpacityTween(\"FadeIn\", 0, \"linear\", 500, false);",
+            "        runtimeScene.getVariables().get(\"FadeInDone\").setBoolean(true);",
+            "    }",
+            "",
+            "    // 3. Dynamic Dim Overlay",
+            "    const isDimOn = globalVars.get(\"DimEnabled\").getAsNumber() === 1;",
+            "    if (dimOverlays.length > 0) {",
+            "        if (isDimOn) {",
+            "            dimOverlays[0].show();",
+            "            dimOverlays[0].setOpacity(120);",
+            "        } else {",
+            "            dimOverlays[0].hide();",
+            "        }",
+            "    }",
+            "",
+            "    // 4. Dynamic Volume Setting",
+            "    let currentVol = globalVars.get(\"SoundVolume\").getAsNumber();",
+            "    if (currentVol === 0 && !globalVars.has(\"SoundVolume\")) {",
+            "        currentVol = 100;",
+            "        globalVars.get(\"SoundVolume\").setNumber(100);",
+            "    }",
+            "    runtimeScene.getGame().getSoundManager().setGlobalVolume(currentVol);",
+            "",
+            "    // 5. Fade OUT when ExitButton is clicked",
+            "    if (exitButtons.length > 0 && exitButtons[0].insideObject(cursorX, cursorY) && inputManager.isMouseButtonPressed(0)) {",
+            "        if (!tweenBehavior.isPlaying(\"FadeToMenu\") && !tweenBehavior.hasFinished(\"FadeToMenu\")) {",
+            "            tweenBehavior.addObjectOpacityTween(\"FadeToMenu\", 255, \"linear\", 500, false);",
+            "        }",
+            "    }",
+            "",
+            "    // 6. Return to Game Menu",
+            "    if (tweenBehavior.hasFinished(\"FadeToMenu\")) {",
+            "        runtimeScene.getGame().getSceneStack().replace(\"Game Menu\");",
             "    }",
             "}"
           ],
@@ -20431,6 +20812,2230 @@
               },
               {
                 "propertyName": "IsDestroyedWithParent"
+              }
+            ]
+          }
+        }
+      ],
+      "eventsBasedObjects": []
+    },
+    {
+      "author": "",
+      "category": "Visual effect",
+      "dimension": "",
+      "extensionNamespace": "",
+      "fullName": "Tween into view",
+      "gdevelopVersion": "",
+      "helpPath": "",
+      "iconUrl": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAyMy4wLjMsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iSWNvbnMiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgMzIgMzIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDMyIDMyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8Zz4NCgk8cGF0aCBkPSJNMjUsMTZjLTAuMywwLTAuNS0wLjEtMC43LTAuM2MtMC40LTAuNC0wLjQtMSwwLTEuNGwzLjMtMy4zbC0zLjMtMy4zYy0wLjQtMC40LTAuNC0xLDAtMS40czEtMC40LDEuNCwwbDQsNA0KCQljMC40LDAuNCwwLjQsMSwwLDEuNGwtNCw0QzI1LjUsMTUuOSwyNS4zLDE2LDI1LDE2eiIvPg0KPC9nPg0KPGc+DQoJPHBhdGggZD0iTTI5LDEySDdjLTAuNiwwLTEtMC40LTEtMXMwLjQtMSwxLTFoMjJjMC42LDAsMSwwLjQsMSwxUzI5LjYsMTIsMjksMTJ6Ii8+DQo8L2c+DQo8Zz4NCgk8cGF0aCBkPSJNNywyNmMtMC4zLDAtMC41LTAuMS0wLjctMC4zbC00LTRjLTAuNC0wLjQtMC40LTEsMC0xLjRsNC00YzAuNC0wLjQsMS0wLjQsMS40LDBzMC40LDEsMCwxLjRMNC40LDIxbDMuMywzLjMNCgkJYzAuNCwwLjQsMC40LDEsMCwxLjRDNy41LDI1LjksNy4zLDI2LDcsMjZ6Ii8+DQo8L2c+DQo8Zz4NCgk8cGF0aCBkPSJNMjUsMjJIM2MtMC42LDAtMS0wLjQtMS0xczAuNC0xLDEtMWgyMmMwLjYsMCwxLDAuNCwxLDFTMjUuNiwyMiwyNSwyMnoiLz4NCjwvZz4NCjwvc3ZnPg0K",
+      "name": "TweenIntoView",
+      "previewIconUrl": "https://asset-resources.gdevelop.io/public-resources/Icons/Glyphster Pack/Master/SVG/Arrows/557b3471ae92fa5c744b9bf14b8803a0c7745c224ed9cfe80037a8ac7295d99e_Arrows_thin_arrow_left_right_directions.svg",
+      "shortDescription": "Tween objects from off-screen into position for smooth UI/cutscene entrances.",
+      "version": "1.0.0",
+      "description": [
+        "Tween objects into position from off screen, or from a set distance, to create a polished visual effect.",
+        "",
+        "When objects are created, or if they exist at the beginning of the scene, they are put ouside of screen and tweened back to their initial position.",
+        "",
+        "This extension can be used to:",
+        "- Make smooth transitions for UI",
+        "- Animate simple cutscenes"
+      ],
+      "origin": {
+        "identifier": "TweenIntoView",
+        "name": "gdevelop-extension-store"
+      },
+      "tags": [
+        "fade",
+        "move"
+      ],
+      "authorIds": [
+        "9MGDlUQAh8QUilno4JPycekjRCJ3"
+      ],
+      "dependencies": [],
+      "globalVariables": [],
+      "sceneVariables": [],
+      "eventsFunctions": [],
+      "eventsFunctionsFolderStructure": {
+        "folderName": "__ROOT"
+      },
+      "eventsBasedBehaviors": [
+        {
+          "description": "Tween objects into position from off screen.",
+          "fullName": "Tween into view",
+          "helpPath": "",
+          "iconUrl": "",
+          "name": "TweenIntoView",
+          "objectType": "",
+          "previewIconUrl": "",
+          "eventsFunctions": [
+            {
+              "fullName": "",
+              "functionType": "Action",
+              "name": "doStepPostEvents",
+              "sentence": "",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "doStepPostEvents is used to avoid a 1-frame delay:\n- The objects are created (by events or at the scene creation)\n- doStepPostEvents trigger tweens\n- The frame is displayed\n- The tween behavior start moving the objects"
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringVariable"
+                      },
+                      "parameters": [
+                        "State",
+                        "=",
+                        "\"JustCreated\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringVariable"
+                      },
+                      "parameters": [
+                        "State",
+                        "=",
+                        "\"Ready\""
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 109,
+                        "g": 230,
+                        "r": 255,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
+                      },
+                      "comment": "We do it here because the object position is not yet known from onCreated."
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BooleanVariable"
+                          },
+                          "parameters": [
+                            "ShouldPlayAtCreation",
+                            "True",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "TweenIntoView::TweenIntoView::TweenIn"
+                          },
+                          "parameters": [
+                            "Object",
+                            "Behavior",
+                            ""
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Tween In"
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "CompareObjectTimer"
+                      },
+                      "parameters": [
+                        "Object",
+                        "\"TweenIntoView_FadeInDelay\"",
+                        ">=",
+                        "Delay"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "RemoveObjectTimer"
+                      },
+                      "parameters": [
+                        "Object",
+                        "\"TweenIntoView_FadeInDelay\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "Object",
+                        "\"TweenIntoView_FadeIn\""
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BooleanVariable"
+                          },
+                          "parameters": [
+                            "ShouldMove",
+                            "True",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Tween::TweenBehavior::AddObjectPositionTween2"
+                          },
+                          "parameters": [
+                            "Object",
+                            "Tween",
+                            "\"TweenIntoView_Move\"",
+                            "TargetX",
+                            "TargetY",
+                            "PositionEasingIn",
+                            "Duration",
+                            ""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BooleanVariable"
+                          },
+                          "parameters": [
+                            "ShouldFade",
+                            "True",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                          },
+                          "parameters": [
+                            "Object",
+                            "Tween",
+                            "\"TweenIntoView_Fade\"",
+                            "TargetOpacity",
+                            "OpacityEasingIn",
+                            "Duration * 0.8",
+                            "TweenDuration"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "CompareObjectTimer"
+                      },
+                      "parameters": [
+                        "Object",
+                        "\"TweenIntoView_FadeIn\"",
+                        ">=",
+                        "Duration"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringVariable"
+                      },
+                      "parameters": [
+                        "State",
+                        "=",
+                        "\"FadedIn\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Tween Out"
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "CompareObjectTimer"
+                      },
+                      "parameters": [
+                        "Object",
+                        "\"TweenIntoView_FadeOutDelay\"",
+                        ">=",
+                        "Delay"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "RemoveObjectTimer"
+                      },
+                      "parameters": [
+                        "Object",
+                        "\"TweenIntoView_FadeOutDelay\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "Object",
+                        "\"TweenIntoView_FadeOut\""
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BooleanVariable"
+                          },
+                          "parameters": [
+                            "ShouldMove",
+                            "True",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Tween::TweenBehavior::AddObjectPositionTween2"
+                          },
+                          "parameters": [
+                            "Object",
+                            "Tween",
+                            "\"TweenIntoView_Move\"",
+                            "Object.Behavior::OriginX()",
+                            "Object.Behavior::OriginY()",
+                            "PositionEasingOut",
+                            "Duration",
+                            ""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BooleanVariable"
+                          },
+                          "parameters": [
+                            "ShouldFade",
+                            "True",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                          },
+                          "parameters": [
+                            "Object",
+                            "Tween",
+                            "\"TweenIntoView_Fade\"",
+                            "0",
+                            "OpacityEasingOut",
+                            "Duration * 0.8",
+                            "TweenDuration"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "CompareObjectTimer"
+                      },
+                      "parameters": [
+                        "Object",
+                        "\"TweenIntoView_FadeOut\"",
+                        ">=",
+                        "Duration"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringVariable"
+                      },
+                      "parameters": [
+                        "State",
+                        "=",
+                        "\"FadedOut\""
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BooleanVariable"
+                          },
+                          "parameters": [
+                            "ShouldBeDeleted",
+                            "True",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Delete"
+                          },
+                          "parameters": [
+                            "Object",
+                            ""
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "TweenIntoView::TweenIntoView",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "Return the X position at the beginning of the fade-in.",
+              "fullName": "Origin X",
+              "functionType": "Expression",
+              "name": "OriginX",
+              "private": true,
+              "sentence": "",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetReturnNumber"
+                      },
+                      "parameters": [
+                        "TargetX"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "Angle",
+                        "=",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetReturnNumber"
+                      },
+                      "parameters": [
+                        "TargetX - Distance"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberVariable"
+                          },
+                          "parameters": [
+                            "Distance",
+                            "=",
+                            "0"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetReturnNumber"
+                          },
+                          "parameters": [
+                            "CameraBorderLeft(Object.Layer()) + TargetX - Object.BoundingBoxRight()"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "Angle",
+                        "=",
+                        "180"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetReturnNumber"
+                      },
+                      "parameters": [
+                        "TargetX + Distance"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberVariable"
+                          },
+                          "parameters": [
+                            "Distance",
+                            "=",
+                            "0"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetReturnNumber"
+                          },
+                          "parameters": [
+                            "CameraBorderRight(Object.Layer()) + TargetX - Object.BoundingBoxLeft()"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "expressionType": {
+                "type": "expression"
+              },
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "TweenIntoView::TweenIntoView",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "Return the Y position at the beginning of the fade-in.",
+              "fullName": "Origin Y",
+              "functionType": "Expression",
+              "name": "OriginY",
+              "private": true,
+              "sentence": "",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetReturnNumber"
+                      },
+                      "parameters": [
+                        "TargetY"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberVariable"
+                          },
+                          "parameters": [
+                            "Angle",
+                            "=",
+                            "90"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetReturnNumber"
+                          },
+                          "parameters": [
+                            "TargetY - Distance"
+                          ]
+                        }
+                      ],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "NumberVariable"
+                              },
+                              "parameters": [
+                                "Distance",
+                                "=",
+                                "0"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetReturnNumber"
+                              },
+                              "parameters": [
+                                "CameraBorderTop(Object.Layer()) + TargetY - Object.BoundingBoxBottom()"
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberVariable"
+                          },
+                          "parameters": [
+                            "Angle",
+                            "=",
+                            "270"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetReturnNumber"
+                          },
+                          "parameters": [
+                            "TargetY + Distance"
+                          ]
+                        }
+                      ],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "NumberVariable"
+                              },
+                              "parameters": [
+                                "Distance",
+                                "=",
+                                "0"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetReturnNumber"
+                              },
+                              "parameters": [
+                                "CameraBorderBottom(Object.Layer()) + TargetY - Object.BoundingBoxTop()"
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "expressionType": {
+                "type": "expression"
+              },
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "TweenIntoView::TweenIntoView",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "Tween the object to its set starting position.",
+              "fullName": "Tween into view",
+              "functionType": "Action",
+              "name": "TweenIn",
+              "sentence": "Tween _PARAM0_ into view",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringVariable"
+                      },
+                      "parameters": [
+                        "State",
+                        "!=",
+                        "\"FadingIn\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "Object",
+                        "\"TweenIntoView_FadeInDelay\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Tween::StopTween"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Tween",
+                        "\"TweenIntoView_Move\"",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Tween::StopTween"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Tween",
+                        "\"TweenIntoView_Fade\"",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "RemoveObjectTimer"
+                      },
+                      "parameters": [
+                        "Object",
+                        "\"TweenIntoView_FadeOut\""
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Or"
+                          },
+                          "parameters": [],
+                          "subInstructions": [
+                            {
+                              "type": {
+                                "value": "StringVariable"
+                              },
+                              "parameters": [
+                                "State",
+                                "=",
+                                "\"JustStarted\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "StringVariable"
+                              },
+                              "parameters": [
+                                "State",
+                                "=",
+                                "\"Ready\""
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "TargetX",
+                            "=",
+                            "Object.X()"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "TargetY",
+                            "=",
+                            "Object.Y()"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "TargetOpacity",
+                            "=",
+                            "Object.Opacity::Value()"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Or"
+                          },
+                          "parameters": [],
+                          "subInstructions": [
+                            {
+                              "type": {
+                                "value": "StringVariable"
+                              },
+                              "parameters": [
+                                "State",
+                                "=",
+                                "\"JustStarted\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "StringVariable"
+                              },
+                              "parameters": [
+                                "State",
+                                "=",
+                                "\"Ready\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "StringVariable"
+                              },
+                              "parameters": [
+                                "State",
+                                "=",
+                                "\"FadedIn\""
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Comment",
+                          "color": {
+                            "b": 109,
+                            "g": 230,
+                            "r": 255,
+                            "textB": 0,
+                            "textG": 0,
+                            "textR": 0
+                          },
+                          "comment": "We evaluate the origin every time because the window may have been resized."
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BooleanVariable"
+                              },
+                              "parameters": [
+                                "ShouldMove",
+                                "True",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetX"
+                              },
+                              "parameters": [
+                                "Object",
+                                "=",
+                                "Object.Behavior::OriginX()"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetY"
+                              },
+                              "parameters": [
+                                "Object",
+                                "=",
+                                "Object.Behavior::OriginY()"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BooleanVariable"
+                              },
+                              "parameters": [
+                                "ShouldFade",
+                                "True",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "OpacityCapability::OpacityBehavior::SetValue"
+                              },
+                              "parameters": [
+                                "Object",
+                                "Opacity",
+                                "=",
+                                "0"
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetStringVariable"
+                          },
+                          "parameters": [
+                            "State",
+                            "=",
+                            "\"FadingIn\""
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "TweenIntoView::TweenIntoView",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "Tween the object to its off screen position.",
+              "fullName": "Tween out of view",
+              "functionType": "Action",
+              "name": "TweenOut",
+              "sentence": "Tween _PARAM0_ out of view",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringVariable"
+                      },
+                      "parameters": [
+                        "State",
+                        "!=",
+                        "\"FadingOut\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "Object",
+                        "\"TweenIntoView_FadeOutDelay\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Tween::StopTween"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Tween",
+                        "\"TweenIntoView_Move\"",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Tween::StopTween"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Tween",
+                        "\"TweenIntoView_Fade\"",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "RemoveObjectTimer"
+                      },
+                      "parameters": [
+                        "Object",
+                        "\"TweenIntoView_FadeIn\""
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "StringVariable"
+                          },
+                          "parameters": [
+                            "State",
+                            "=",
+                            "\"FadedOut\""
+                          ]
+                        }
+                      ],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BooleanVariable"
+                              },
+                              "parameters": [
+                                "ShouldMove",
+                                "True",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetX"
+                              },
+                              "parameters": [
+                                "Object",
+                                "=",
+                                "TargetX"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetY"
+                              },
+                              "parameters": [
+                                "Object",
+                                "=",
+                                "TargetY"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BooleanVariable"
+                              },
+                              "parameters": [
+                                "ShouldFade",
+                                "True",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "OpacityCapability::OpacityBehavior::SetValue"
+                              },
+                              "parameters": [
+                                "Object",
+                                "Opacity",
+                                "=",
+                                "TargetOpacity"
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetStringVariable"
+                          },
+                          "parameters": [
+                            "State",
+                            "=",
+                            "\"FadingOut\""
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "TweenIntoView::TweenIntoView",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "Check if the object finished tweening into view.",
+              "fullName": "Tweened into view",
+              "functionType": "Condition",
+              "name": "IsTweenedIn",
+              "sentence": "_PARAM0_ finished tweening into view",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringVariable"
+                      },
+                      "parameters": [
+                        "State",
+                        "=",
+                        "\"FadedIn\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetReturnBoolean"
+                      },
+                      "parameters": [
+                        "True"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "TweenIntoView::TweenIntoView",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "Check if the object finished tweened out of view.",
+              "fullName": "Tweened out of view",
+              "functionType": "Condition",
+              "name": "IsTweenedOut",
+              "sentence": "_PARAM0_ finished tweening out of view",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringVariable"
+                      },
+                      "parameters": [
+                        "State",
+                        "=",
+                        "\"FadedOut\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetReturnBoolean"
+                      },
+                      "parameters": [
+                        "True"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "TweenIntoView::TweenIntoView",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "Set whether to delete the object when the \"tween out of view\" action has finished.",
+              "fullName": "Delete after tween out",
+              "functionType": "Action",
+              "group": "Tween into view configuration",
+              "name": "SetShouldBeDeleted",
+              "sentence": "Should delete _PARAM0_ when the \"tween out of view\" action has finished: _PARAM2_",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanVariable"
+                      },
+                      "parameters": [
+                        "ShouldBeDeleted",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanVariable"
+                      },
+                      "parameters": [
+                        "Value",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanVariable"
+                      },
+                      "parameters": [
+                        "ShouldBeDeleted",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "TweenIntoView::TweenIntoView",
+                  "type": "behavior"
+                },
+                {
+                  "defaultValue": "yes",
+                  "description": "Should delete the object when the \"tween out of view\" action has finished",
+                  "name": "Value",
+                  "optional": true,
+                  "type": "yesorno"
+                }
+              ],
+              "objectGroups": []
+            }
+          ],
+          "eventsFunctionsFolderStructure": {
+            "folderName": "__ROOT",
+            "children": [
+              {
+                "functionName": "doStepPostEvents"
+              },
+              {
+                "functionName": "OriginX"
+              },
+              {
+                "functionName": "OriginY"
+              },
+              {
+                "functionName": "TweenIn"
+              },
+              {
+                "functionName": "TweenOut"
+              },
+              {
+                "functionName": "IsTweenedIn"
+              },
+              {
+                "functionName": "IsTweenedOut"
+              },
+              {
+                "folderName": "Tween into view configuration",
+                "children": [
+                  {
+                    "functionName": "SetShouldBeDeleted"
+                  }
+                ]
+              }
+            ]
+          },
+          "propertyDescriptors": [
+            {
+              "value": "90",
+              "type": "NumberWithChoices",
+              "label": "Direction",
+              "group": "Motion",
+              "choices": [
+                {
+                  "label": "Move down",
+                  "value": "90"
+                },
+                {
+                  "label": "Move up",
+                  "value": "270"
+                },
+                {
+                  "label": "Move right",
+                  "value": "0"
+                },
+                {
+                  "label": "Move left",
+                  "value": "180"
+                }
+              ],
+              "name": "Angle"
+            },
+            {
+              "value": "0.5",
+              "type": "Number",
+              "unit": "Second",
+              "label": "Duration",
+              "group": "Timing",
+              "name": "Duration"
+            },
+            {
+              "value": "0",
+              "type": "Number",
+              "unit": "Pixel",
+              "label": "Distance",
+              "description": "Leave this value at 0 to move the object in from outside of the screen.",
+              "group": "Motion",
+              "name": "Distance"
+            },
+            {
+              "value": "true",
+              "type": "Boolean",
+              "label": "Tween in the object at creation",
+              "group": "Timing",
+              "name": "ShouldPlayAtCreation"
+            },
+            {
+              "value": "easeFromTo",
+              "type": "Choice",
+              "label": "Moving in easing",
+              "group": "Motion",
+              "choices": [
+                {
+                  "label": "linear",
+                  "value": "linear"
+                },
+                {
+                  "label": "easeInQuad",
+                  "value": "easeInQuad"
+                },
+                {
+                  "label": "easeOutQuad",
+                  "value": "easeOutQuad"
+                },
+                {
+                  "label": "easeInOutQuad",
+                  "value": "easeInOutQuad"
+                },
+                {
+                  "label": "easeInCubic",
+                  "value": "easeInCubic"
+                },
+                {
+                  "label": "easeOutCubic",
+                  "value": "easeOutCubic"
+                },
+                {
+                  "label": "easeInOutCubic",
+                  "value": "easeInOutCubic"
+                },
+                {
+                  "label": "easeInQuart",
+                  "value": "easeInQuart"
+                },
+                {
+                  "label": "easeOutQuart",
+                  "value": "easeOutQuart"
+                },
+                {
+                  "label": "easeInOutQuart",
+                  "value": "easeInOutQuart"
+                },
+                {
+                  "label": "easeInQuint",
+                  "value": "easeInQuint"
+                },
+                {
+                  "label": "easeOutQuint",
+                  "value": "easeOutQuint"
+                },
+                {
+                  "label": "easeInOutQuint",
+                  "value": "easeInOutQuint"
+                },
+                {
+                  "label": "easeInOutSine",
+                  "value": "easeInOutSine"
+                },
+                {
+                  "label": "easeInExpo",
+                  "value": "easeInExpo"
+                },
+                {
+                  "label": "easeOutExpo",
+                  "value": "easeOutExpo"
+                },
+                {
+                  "label": "easeInOutExpo",
+                  "value": "easeInOutExpo"
+                },
+                {
+                  "label": "easeInCirc",
+                  "value": "easeInCirc"
+                },
+                {
+                  "label": "easeOutCirc",
+                  "value": "easeOutCirc"
+                },
+                {
+                  "label": "easeInOutCirc",
+                  "value": "easeInOutCirc"
+                },
+                {
+                  "label": "easeOutBounce",
+                  "value": "easeOutBounce"
+                },
+                {
+                  "label": "easeInBack",
+                  "value": "easeInBack"
+                },
+                {
+                  "label": "easeOutBack",
+                  "value": "easeOutBack"
+                },
+                {
+                  "label": "easeInOutBack",
+                  "value": "easeInOutBack"
+                },
+                {
+                  "label": "elastic",
+                  "value": "elastic"
+                },
+                {
+                  "label": "swingFromTo",
+                  "value": "swingFromTo"
+                },
+                {
+                  "label": "swingFrom",
+                  "value": "swingFrom"
+                },
+                {
+                  "label": "swingTo",
+                  "value": "swingTo"
+                },
+                {
+                  "label": "bounce",
+                  "value": "bounce"
+                },
+                {
+                  "label": "bouncePast",
+                  "value": "bouncePast"
+                },
+                {
+                  "label": "easeFromTo",
+                  "value": "easeFromTo"
+                },
+                {
+                  "label": "easeFrom",
+                  "value": "easeFrom"
+                },
+                {
+                  "label": "easeTo",
+                  "value": "easeTo"
+                }
+              ],
+              "name": "PositionEasingIn"
+            },
+            {
+              "value": "easeOutQuad",
+              "type": "Choice",
+              "label": "Moving out easing",
+              "group": "Motion",
+              "choices": [
+                {
+                  "label": "linear",
+                  "value": "linear"
+                },
+                {
+                  "label": "easeInQuad",
+                  "value": "easeInQuad"
+                },
+                {
+                  "label": "easeOutQuad",
+                  "value": "easeOutQuad"
+                },
+                {
+                  "label": "easeInOutQuad",
+                  "value": "easeInOutQuad"
+                },
+                {
+                  "label": "easeInCubic",
+                  "value": "easeInCubic"
+                },
+                {
+                  "label": "easeOutCubic",
+                  "value": "easeOutCubic"
+                },
+                {
+                  "label": "easeInOutCubic",
+                  "value": "easeInOutCubic"
+                },
+                {
+                  "label": "easeInQuart",
+                  "value": "easeInQuart"
+                },
+                {
+                  "label": "easeOutQuart",
+                  "value": "easeOutQuart"
+                },
+                {
+                  "label": "easeInOutQuart",
+                  "value": "easeInOutQuart"
+                },
+                {
+                  "label": "easeInQuint",
+                  "value": "easeInQuint"
+                },
+                {
+                  "label": "easeOutQuint",
+                  "value": "easeOutQuint"
+                },
+                {
+                  "label": "easeInOutQuint",
+                  "value": "easeInOutQuint"
+                },
+                {
+                  "label": "easeInOutSine",
+                  "value": "easeInOutSine"
+                },
+                {
+                  "label": "easeInExpo",
+                  "value": "easeInExpo"
+                },
+                {
+                  "label": "easeOutExpo",
+                  "value": "easeOutExpo"
+                },
+                {
+                  "label": "easeInOutExpo",
+                  "value": "easeInOutExpo"
+                },
+                {
+                  "label": "easeInCirc",
+                  "value": "easeInCirc"
+                },
+                {
+                  "label": "easeOutCirc",
+                  "value": "easeOutCirc"
+                },
+                {
+                  "label": "easeInOutCirc",
+                  "value": "easeInOutCirc"
+                },
+                {
+                  "label": "easeOutBounce",
+                  "value": "easeOutBounce"
+                },
+                {
+                  "label": "easeInBack",
+                  "value": "easeInBack"
+                },
+                {
+                  "label": "easeOutBack",
+                  "value": "easeOutBack"
+                },
+                {
+                  "label": "easeInOutBack",
+                  "value": "easeInOutBack"
+                },
+                {
+                  "label": "elastic",
+                  "value": "elastic"
+                },
+                {
+                  "label": "swingFromTo",
+                  "value": "swingFromTo"
+                },
+                {
+                  "label": "swingFrom",
+                  "value": "swingFrom"
+                },
+                {
+                  "label": "swingTo",
+                  "value": "swingTo"
+                },
+                {
+                  "label": "bounce",
+                  "value": "bounce"
+                },
+                {
+                  "label": "bouncePast",
+                  "value": "bouncePast"
+                },
+                {
+                  "label": "easeFromTo",
+                  "value": "easeFromTo"
+                },
+                {
+                  "label": "easeFrom",
+                  "value": "easeFrom"
+                },
+                {
+                  "label": "easeTo",
+                  "value": "easeTo"
+                }
+              ],
+              "name": "PositionEasingOut"
+            },
+            {
+              "value": "true",
+              "type": "Boolean",
+              "label": "Delete the object when the \"tween out of view\" action has finished",
+              "group": "Timing",
+              "name": "ShouldBeDeleted"
+            },
+            {
+              "value": "true",
+              "type": "Boolean",
+              "label": "Fade in/out the object",
+              "group": "Opacity",
+              "name": "ShouldFade"
+            },
+            {
+              "value": "0",
+              "type": "Number",
+              "label": "The X position at the end of fade in",
+              "group": "Motion",
+              "hidden": true,
+              "name": "TargetX"
+            },
+            {
+              "value": "0",
+              "type": "Number",
+              "label": "The Y position at the end of fade in",
+              "group": "Motion",
+              "hidden": true,
+              "name": "TargetY"
+            },
+            {
+              "value": "",
+              "type": "Behavior",
+              "label": "Objects with opacity",
+              "extraInformation": [
+                "OpacityCapability::OpacityBehavior"
+              ],
+              "choices": [],
+              "name": "Opacity"
+            },
+            {
+              "value": "",
+              "type": "Behavior",
+              "label": "Tween",
+              "extraInformation": [
+                "Tween::TweenBehavior"
+              ],
+              "choices": [],
+              "name": "Tween"
+            },
+            {
+              "value": "true",
+              "type": "Boolean",
+              "label": "Move the object",
+              "group": "Motion",
+              "name": "ShouldMove"
+            },
+            {
+              "value": "0",
+              "type": "Number",
+              "unit": "Second",
+              "label": "Delay",
+              "group": "Timing",
+              "name": "Delay"
+            },
+            {
+              "value": "easeInQuad",
+              "type": "Choice",
+              "label": "Fade in easing",
+              "group": "Opacity",
+              "choices": [
+                {
+                  "label": "linear",
+                  "value": "linear"
+                },
+                {
+                  "label": "easeInQuad",
+                  "value": "easeInQuad"
+                },
+                {
+                  "label": "easeOutQuad",
+                  "value": "easeOutQuad"
+                },
+                {
+                  "label": "easeInOutQuad",
+                  "value": "easeInOutQuad"
+                },
+                {
+                  "label": "easeInCubic",
+                  "value": "easeInCubic"
+                },
+                {
+                  "label": "easeOutCubic",
+                  "value": "easeOutCubic"
+                },
+                {
+                  "label": "easeInOutCubic",
+                  "value": "easeInOutCubic"
+                },
+                {
+                  "label": "easeInQuart",
+                  "value": "easeInQuart"
+                },
+                {
+                  "label": "easeOutQuart",
+                  "value": "easeOutQuart"
+                },
+                {
+                  "label": "easeInOutQuart",
+                  "value": "easeInOutQuart"
+                },
+                {
+                  "label": "easeInQuint",
+                  "value": "easeInQuint"
+                },
+                {
+                  "label": "easeOutQuint",
+                  "value": "easeOutQuint"
+                },
+                {
+                  "label": "easeInOutQuint",
+                  "value": "easeInOutQuint"
+                },
+                {
+                  "label": "easeInOutSine",
+                  "value": "easeInOutSine"
+                },
+                {
+                  "label": "easeInExpo",
+                  "value": "easeInExpo"
+                },
+                {
+                  "label": "easeOutExpo",
+                  "value": "easeOutExpo"
+                },
+                {
+                  "label": "easeInOutExpo",
+                  "value": "easeInOutExpo"
+                },
+                {
+                  "label": "easeInCirc",
+                  "value": "easeInCirc"
+                },
+                {
+                  "label": "easeOutCirc",
+                  "value": "easeOutCirc"
+                },
+                {
+                  "label": "easeInOutCirc",
+                  "value": "easeInOutCirc"
+                },
+                {
+                  "label": "easeOutBounce",
+                  "value": "easeOutBounce"
+                },
+                {
+                  "label": "easeInBack",
+                  "value": "easeInBack"
+                },
+                {
+                  "label": "easeOutBack",
+                  "value": "easeOutBack"
+                },
+                {
+                  "label": "easeInOutBack",
+                  "value": "easeInOutBack"
+                },
+                {
+                  "label": "elastic",
+                  "value": "elastic"
+                },
+                {
+                  "label": "swingFromTo",
+                  "value": "swingFromTo"
+                },
+                {
+                  "label": "swingFrom",
+                  "value": "swingFrom"
+                },
+                {
+                  "label": "swingTo",
+                  "value": "swingTo"
+                },
+                {
+                  "label": "bounce",
+                  "value": "bounce"
+                },
+                {
+                  "label": "bouncePast",
+                  "value": "bouncePast"
+                },
+                {
+                  "label": "easeFromTo",
+                  "value": "easeFromTo"
+                },
+                {
+                  "label": "easeFrom",
+                  "value": "easeFrom"
+                },
+                {
+                  "label": "easeTo",
+                  "value": "easeTo"
+                }
+              ],
+              "advanced": true,
+              "name": "OpacityEasingIn"
+            },
+            {
+              "value": "easeOutQuad",
+              "type": "Choice",
+              "label": "Fade out easing",
+              "group": "Opacity",
+              "choices": [
+                {
+                  "label": "linear",
+                  "value": "linear"
+                },
+                {
+                  "label": "easeInQuad",
+                  "value": "easeInQuad"
+                },
+                {
+                  "label": "easeOutQuad",
+                  "value": "easeOutQuad"
+                },
+                {
+                  "label": "easeInOutQuad",
+                  "value": "easeInOutQuad"
+                },
+                {
+                  "label": "easeInCubic",
+                  "value": "easeInCubic"
+                },
+                {
+                  "label": "easeOutCubic",
+                  "value": "easeOutCubic"
+                },
+                {
+                  "label": "easeInOutCubic",
+                  "value": "easeInOutCubic"
+                },
+                {
+                  "label": "easeInQuart",
+                  "value": "easeInQuart"
+                },
+                {
+                  "label": "easeOutQuart",
+                  "value": "easeOutQuart"
+                },
+                {
+                  "label": "easeInOutQuart",
+                  "value": "easeInOutQuart"
+                },
+                {
+                  "label": "easeInQuint",
+                  "value": "easeInQuint"
+                },
+                {
+                  "label": "easeOutQuint",
+                  "value": "easeOutQuint"
+                },
+                {
+                  "label": "easeInOutQuint",
+                  "value": "easeInOutQuint"
+                },
+                {
+                  "label": "easeInOutSine",
+                  "value": "easeInOutSine"
+                },
+                {
+                  "label": "easeInExpo",
+                  "value": "easeInExpo"
+                },
+                {
+                  "label": "easeOutExpo",
+                  "value": "easeOutExpo"
+                },
+                {
+                  "label": "easeInOutExpo",
+                  "value": "easeInOutExpo"
+                },
+                {
+                  "label": "easeInCirc",
+                  "value": "easeInCirc"
+                },
+                {
+                  "label": "easeOutCirc",
+                  "value": "easeOutCirc"
+                },
+                {
+                  "label": "easeInOutCirc",
+                  "value": "easeInOutCirc"
+                },
+                {
+                  "label": "easeOutBounce",
+                  "value": "easeOutBounce"
+                },
+                {
+                  "label": "easeInBack",
+                  "value": "easeInBack"
+                },
+                {
+                  "label": "easeOutBack",
+                  "value": "easeOutBack"
+                },
+                {
+                  "label": "easeInOutBack",
+                  "value": "easeInOutBack"
+                },
+                {
+                  "label": "elastic",
+                  "value": "elastic"
+                },
+                {
+                  "label": "swingFromTo",
+                  "value": "swingFromTo"
+                },
+                {
+                  "label": "swingFrom",
+                  "value": "swingFrom"
+                },
+                {
+                  "label": "swingTo",
+                  "value": "swingTo"
+                },
+                {
+                  "label": "bounce",
+                  "value": "bounce"
+                },
+                {
+                  "label": "bouncePast",
+                  "value": "bouncePast"
+                },
+                {
+                  "label": "easeFromTo",
+                  "value": "easeFromTo"
+                },
+                {
+                  "label": "easeFrom",
+                  "value": "easeFrom"
+                },
+                {
+                  "label": "easeTo",
+                  "value": "easeTo"
+                }
+              ],
+              "advanced": true,
+              "name": "OpacityEasingOut"
+            },
+            {
+              "value": "255",
+              "type": "Number",
+              "label": "",
+              "group": "Opacity",
+              "hidden": true,
+              "name": "TargetOpacity"
+            },
+            {
+              "value": "0",
+              "type": "Number",
+              "label": "The X position at the beginning of fade in",
+              "group": "Motion",
+              "hidden": true,
+              "name": "OriginX"
+            },
+            {
+              "value": "0",
+              "type": "Number",
+              "label": "The Y position at the beginning of fade in",
+              "group": "Motion",
+              "hidden": true,
+              "name": "OriginY"
+            },
+            {
+              "value": "JustCreated",
+              "type": "String",
+              "label": "",
+              "group": "Timing",
+              "hidden": true,
+              "name": "State"
+            }
+          ],
+          "propertiesFolderStructure": {
+            "folderName": "__ROOT",
+            "children": [
+              {
+                "propertyName": "Opacity"
+              },
+              {
+                "propertyName": "Tween"
+              },
+              {
+                "folderName": "Timing",
+                "children": [
+                  {
+                    "propertyName": "ShouldPlayAtCreation"
+                  },
+                  {
+                    "propertyName": "Delay"
+                  },
+                  {
+                    "propertyName": "Duration"
+                  },
+                  {
+                    "propertyName": "ShouldBeDeleted"
+                  },
+                  {
+                    "propertyName": "State"
+                  }
+                ]
+              },
+              {
+                "folderName": "Motion",
+                "children": [
+                  {
+                    "propertyName": "ShouldMove"
+                  },
+                  {
+                    "propertyName": "Angle"
+                  },
+                  {
+                    "propertyName": "Distance"
+                  },
+                  {
+                    "propertyName": "PositionEasingIn"
+                  },
+                  {
+                    "propertyName": "PositionEasingOut"
+                  },
+                  {
+                    "propertyName": "OriginX"
+                  },
+                  {
+                    "propertyName": "OriginY"
+                  },
+                  {
+                    "propertyName": "TargetX"
+                  },
+                  {
+                    "propertyName": "TargetY"
+                  }
+                ]
+              },
+              {
+                "folderName": "Opacity",
+                "children": [
+                  {
+                    "propertyName": "ShouldFade"
+                  },
+                  {
+                    "propertyName": "OpacityEasingIn"
+                  },
+                  {
+                    "propertyName": "OpacityEasingOut"
+                  },
+                  {
+                    "propertyName": "TargetOpacity"
+                  }
+                ]
               }
             ]
           }
